@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Python climate change :: this.is.art — Data, Code and Art</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="The Setup First of climate change is an insanely scary issue for everyone and should not be neglected! However, I want to talk about a different environment, a python environment.
+I recently got asked to talk about my environment management when I work in python. However if that person had read my first post on this page they would have noticed:
+ &amp;ldquo;Pipenv: The Future of Python Dependency Management&amp;rdquo; - A splendid talk about how not to have a breakdown trying to run your python code on other peoples computers (aka sharing projects and proper dependency management)"/>
+<meta name="keywords" content="pipenv, learning, programming, python"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/python-climate-change/" />
+
+
+
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python climate change"/>
+<meta name="twitter:description" content="Exploring python environment management"/>
+
+
+
+<meta property="og:title" content="Python climate change" />
+<meta property="og:description" content="Exploring python environment management" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/python-climate-change/" />
+<meta property="article:published_time" content="2019-11-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-11-05T00:00:00+00:00" /><meta property="og:site_name" content="this.is.art" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">this.is.art</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/python-climate-change/">Python climate change</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-11-05
+        </span>
+      
+      <span class="post-author">— Written by Art</span>
+      
+        <span class="post-read-time">— 10 min read</span>
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          #<a href="/tags/pipenv/">pipenv</a>&nbsp;
+        
+          #<a href="/tags/programming/">programming</a>&nbsp;
+        
+          #<a href="/tags/python/">python</a>&nbsp;
+        
+      </span>
+    
+
+    
+      
+        <img src="/img/green_python.jpg" class="post-cover" />
+      
+    
+
+    <div class="post-content">
+      <h1 id="the-setup">The Setup</h1>
+<p>First of climate change is an insanely scary issue for everyone and should <em>not</em>
+be neglected! <em>However</em>, I want to talk about a different environment, a
+<code>python</code> environment.</p>
+<p>I recently got asked to talk about my environment management when I work in
+python. However if that person had read my first post on this page they would
+have noticed:</p>
+<blockquote>
+<p>&ldquo;Pipenv: The Future of Python Dependency Management&rdquo; - A splendid talk about
+how not to have a breakdown trying to run your python code on other peoples
+computers (aka sharing projects and proper dependency management)</p>
+</blockquote>
+<p>I still recommend going there and watching the whole talk about it, however I
+will expand on what <em>I use at the moment</em>.</p>
+<p>Now the reason I say at the moment is because the landscape for this stuff will
+change and has been changing, however I think we've reached a point where
+environment management for python couldn't be easier if you spend 10 minutes
+setting things up <strong>right</strong>.</p>
+<p><!-- raw HTML omitted -->(if you're hardcore you can skip this and use nix)<!-- raw HTML omitted --></p>
+<p>At the moment I will use a Unix like system as an example so Mac users and Linux
+users shouldn't have any issues. However you are likely to find the same tools
+on Windows that work in the same exact way.</p>
+<p>I will also assume you know a bit of python, meaning I can throw around terms
+like <code>pip</code> and not scare you off.</p>
+<p>And finally I think the goal of this post is just to consolidate the use of
+existing tools into a workflow that I use. So if you want to learn more about
+the bells and whistles of the tools themselves or find alternatives, you <em>will</em>
+have to do it yourselves.</p>
+<h1 id="the-performance">The Performance</h1>
+<h2 id="pyenv">pyenv</h2>
+<p>Ok, so you got your new computer, first things first you need python. Likely
+Unix systems come with their own version of python. Now this python is there to
+make sure that the system itself can run things it needs to run in python.
+Meaning that if it has python scripts it needs to execute, this is what it would
+use to run.</p>
+<p>You don't want to mess with that.</p>
+<p>The easiest way to get python and be able to switch versions on the fly and
+update it super simply, is to use <a href="https://github.com/pyenv/pyenv">pyenv</a>. Make
+sure to look up the very neat
+<a href="https://github.com/pyenv/pyenv-installer">pyenv-installer</a>.</p>
+<p>What this will allow you to do is to:</p>
+<ul>
+<li>install any version of python you want (including things like Iron-Python
+and Anaconda) by simply typing <code>pyenv install 3.9-dev</code> or <code>pyenv install list</code>
+to see all the versions</li>
+<li>set a global version of python whenever you choose by running <code>pyenv global 3.7.6</code></li>
+<li>set local versions of python per folder! which is great for example if
+you've gotten some old code from a colleague and you need to run it as a one
+off and don't want to replace all those pesky print statements.</li>
+</ul>
+<p>This. Is. Magical. Trust me. The ability to jump around is useful to no end and
+recently I used it when presenting the python gotchas to my colleagues as some
+of the cool mind-bending tricks no longer worked in 3.7.</p>
+<h2 id="pipenv">pipenv</h2>
+<p>Now. Once you've sorted your python and you can run stuff, the next step is to
+actually figure out how to install packages. Whichever python version you
+install through <code>pyenv</code> will come with <code>pip</code> - the python package manager.</p>
+<p>Now you might get tempted to start installing tools and packages that you want
+to use straight away through <code>pip</code>. The issue with that is that you're
+installing everything to a global bucket.</p>
+<p><strong>Warning: Incoming horrible analogy!</strong></p>
+<p>Imagine <a href="https://en.wikipedia.org/wiki/Waterworld">Waterworld</a> the 1995, Kevin
+Costner movie about the whole world engulfed in water.</p>
+<p>Lets say you want to drink some water in that world, and instead of pouring
+fresh water into a cup and drinking from there, you pour it into the ocean then
+drink from the ocean. Now that's not pleasant as it gets mixed with all sorts of
+stuff. Don't get me wrong, its still drinkable in theory, but in practice it
+will likely make you ill.</p>
+<p>When you install a package without containing it, in whats called a virtual
+environment, you're essentially pouring yourself some fresh water to drink by
+dumping it into the ocean instead of a cup. <code>pip install PACKAGE</code> will by
+default dump any packages into one massive, system-wide location. Which isn't
+great when someone else asks you to pass a cup of water as you can't unpick what
+you installed from what was already there from previous installations. In other
+words, telling someone what exactly they need from your massive set of packages
+to run your scripts is hard.</p>
+<p>Virtual environment tools allow you to containerise your installations in a way
+that lets you then share your work in a reproducible manner. I recommend at this
+point checking out <code>venv</code> in python and coming back to this post afterwards as most
+of the other tools are just nice little wrappers and quality of life
+improvements around that basic tool.</p>
+<p>As I said, most tools just let you use <code>venv</code> in a more concise and easily
+accessible manner. Recently I have had my eye on <code>poetry</code> which has some nice
+little features, but as you saw from the title to this section we'll be focusing
+on <code>pipenv</code>.</p>
+<p>Now <code>pipenv</code> is the recommended python dependency management tool as per the
+python documentation (at the time of writing). And I think for good reason. It
+has a few great features that I personally think make it great for usage. But if
+you really boil it down it is just a nice little wrapper around virtual
+environments and <code>pip</code> in one package.</p>
+<p>Let me show you a basic workflow with this fine tool.</p>
+<h3 id="the-workflow">The workflow</h3>
+<p>Lets say you are starting a new project in a folder called <code>ML_dev</code>. Now you
+want to be able to share this project in the future with other people so they
+can run it.</p>
+<p>The first thing to do is to create the folder and <code>cd</code> into it. In the folder
+you then can type in <code>pipenv install SPACE_SEPARATED_LIST_OF_PACKAGES</code> this will
+create a new virtual environment <strong>linked to the folder name and location</strong>.</p>
+<p>You now have a virtual environment somewhere (you don't need to know where the
+files for it live as pipenv will handle it for you). This virtual environment,
+once activated, will contain all your newly installed packages, assuming you
+install them within the virtual environment.</p>
+<p>So in order for you to abstract yourself from your global set of packages and
+live in your cosy new world, you need to run <code>pipenv shell</code> this will shove you
+into a world of pure imagination. Where you no longer have access to the global
+packages you had before, but you will have access to the ones you installed in
+the previous command and will have the ability to <code>pipenv install</code> new ones
+without tainting your ocean. Note, please don't use <code>pip install</code> in your virtual
+environments and the more tech savvy devs check out the <code>--dev</code> option for pipenv
+;)</p>
+<p>For the sake of completeness I will also briefly cover of how pipenv actually
+keeps track of all this stuff. When you create a virtual environment with
+<code>pipenv</code>, you will create a nice little file called <code>Pipfile</code> which will keep
+track of all the key bits and pieces about the environment. This is the file
+(it and its sister file <code>Pipfile.lock</code>) are the files that you need to ship to
+someone else for them to recreate their environment. The <code>Pipfile.lock</code> file is
+a file that gets created and update whenever <code>pipenv</code> is <strong>sure</strong> that all the
+dependencies that are installed in the environment can be resolved and will work
+nicely. So if you ever see a <code>locking failed</code> when you install a new package,
+this means that the package was installed (it will appear in the <code>Pipfile</code>), but
+it might have issues working with other packages or might need newer versions of
+a given package that other packages might not work with. Anyway, here is an
+example <code>Pipfile</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">[[source]]
+name = <span style="color:#e6db74">&#34;pypi&#34;</span>
+url = <span style="color:#e6db74">&#34;https://pypi.org/simple&#34;</span>
+verify_ssl = <span style="color:#66d9ef">true</span>
+
+[dev-packages]
+
+[packages]
+numpy = <span style="color:#e6db74">&#34;*&#34;</span>
+scipy = <span style="color:#e6db74">&#34;*&#34;</span>
+pandas = <span style="color:#e6db74">&#34;*&#34;</span>
+pytest = <span style="color:#e6db74">&#34;*&#34;</span>
+hypothesis = <span style="color:#e6db74">&#34;*&#34;</span>
+
+[requires]
+python_version = <span style="color:#e6db74">&#34;3.7&#34;</span>
+</code></pre></div><p>I suppose I should highlight the things I like about this tool and the workflow
+it offers.</p>
+<ol>
+<li>No need to write a bunch of shell commands to jump into a virtual
+environment. Just go to the folder and type <code>pipenv shell</code></li>
+<li>The reason why I insisted on you using <code>pipenv install</code> rather than the <code>pip</code>
+equivalent is because <code>pipenv</code> resolves dependencies. This means that it will
+try to <code>lock</code> the packages after each install and if that success this means
+that all packages can work in harmony together. Similar to what <code>conda</code>
+promises.</li>
+<li>Vulnerability detection. You can run <code>pipenv check</code> and it will check for security
+vulnerabilities as part of that command against known ones published online.</li>
+<li>Perhaps one of the things I like the most is that <code>pipenv</code> works with <code>pyenv</code>
+and allows you to set <strong>PER PROJECT</strong> python versions by using <code>--python=3.8</code>
+like commands when you initialise an environment</li>
+<li>The last feature is something I will dedicate the next section to, so read on.</li>
+</ol>
+<h3 id="dotenv">Dotenv</h3>
+<p>So let us suppose that you are developing some form of online website in python.
+Now, you will/might stumble upon an issue fairly quickly of how to make sure
+that what you have developed on your local machine can be easily deployed on a
+virtual machine somewhere online to sit there until the <strong>HEAT DEATH OF THE
+UNIVERSE</strong>.</p>
+<p>&ldquo;What?&rdquo; I hear you say. Well imagine a situation where you are developing a
+website and it needs a database URL. Or lets say you have some API key
+that you don't want to include in your code as someone with access to your code
+on github can see the key and start using it as their own.</p>
+<p>In that case what you might want to consider is environment variables. Your
+shell and computer in general has variables that can be set for the whole system
+and you can access those variables through python or any other languages. So if
+you set a variable (how you do this will depend on the Operating System)
+<strong>API_KEY=001123abc0987asd</strong> and another one <strong>DATABASE_URL=&hellip;/&hellip;/&hellip;</strong> you
+can then access these using the <code>os</code> package in python.</p>
+<p>Hence you haven't hard-coded these in your code anywhere and no malicious people
+can start using any of this for their own purposes.</p>
+<p>Now, setting up these things is annoying in some cases. So there are tools like
+<code>dotenv</code> which allow you to load in these variables from a file, usually called
+a <code>.env</code> file. So in practice you could make a <code>.env</code>
+file, dump the aforementioned variables into it and load it in every time your
+code runs programmatically through the <code>dotenv</code>library for your language and you're
+set to go. But <code>pipenv</code> (and other similar tools for other languages) started
+including this <code>dotenv</code> stuff from the get go. Meaning that if you have a file
+called <code>.env</code> in your project directory and your jump into a <code>pipenv</code> shell or
+use <code>pipenv run</code>, it automatically picks up these things into your environment.
+This allows you to not hard-code in the existence of such a file and the usage
+of the <code>dotenv</code> package in your code and you can just use <code>os</code> to pick up these
+files assuming that they will be there. And once you deploy this to some other
+system, you will just have to make sure these variables exist in their environment.</p>
+<h1 id="the-prestige">The Prestige</h1>
+<p>Anywho, that's about the end of the post. To summarise, use <code>pyenv</code> to not mess up your
+python installations and <code>pipenv</code> to manage your packages in a nice and tidy
+way.</p>
+<p>Read up more on it online, check out the link in the beginning of this blog
+or if you're unlucky enough to know me in person, come ask me more about it.</p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="/posts/adventures-in-functionland/">
+                <span class="button__text">Arts adventures in functionland</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">this.is.art</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
