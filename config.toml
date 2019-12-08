@@ -1,0 +1,45 @@
+baseurl = "/"
+languageCode = "en-us"
+theme = "m10c"
+paginate = 5
+googleAnalytics = "UA-150010764-1"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+
+[params]
+  author = "Art Eidukas"
+  avatar = "https://i.imgur.com/7CJuxBB.jpg"
+
+[[params.social]]
+  name = "github"
+  url = "https://github.com/finnkauski"
+
+[[params.social]]
+  name = "facebook"
+  url = "https://www.facebook.com/iwiivi"
+
+[[params.social]]
+  name = "keybase"
+  url = "https://keybase.io/finnkauski"
+
+[params.style]
+  darkestColor = "black"
+  darkColor = "#1B1D1E"
+  lightColor = "white"
+  lightestColor = "white"
+  primaryColor = "#FF5733"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    title = "the.finest.art"
+    description = "Data, Code, Art"
