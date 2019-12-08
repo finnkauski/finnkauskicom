@@ -3,12 +3,32 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://finnkauski.com/tags/pipenv/</loc>
-    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
+    <loc>https://finnkauski.com/tags/general/</loc>
+    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://finnkauski.com/posts/</loc>
+    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/posts/site-change/</loc>
+    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/</loc>
+    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/</loc>
+    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/pipenv/</loc>
     <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -24,16 +44,6 @@
   
   <url>
     <loc>https://finnkauski.com/posts/python-climate-change/</loc>
-    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/</loc>
-    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/</loc>
     <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -59,11 +69,6 @@
   
   <url>
     <loc>https://finnkauski.com/posts/a-warm-welcome/</loc>
-    <lastmod>2019-10-14T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/general/</loc>
     <lastmod>2019-10-14T00:00:00+00:00</lastmod>
   </url>
   

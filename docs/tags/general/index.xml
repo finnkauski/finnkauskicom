@@ -6,10 +6,22 @@
     <description>Recent content in general on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://finnkauski.com/tags/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Quick update</title>
+      <link>https://finnkauski.com/posts/site-change/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/posts/site-change/</guid>
+      <description>Hey folks! Just decided to give you a shout that the page has gotten a bit of a facelift. I am currently using hugo (great framework) to develop and deploy my pages.
+I will writing up a nice little post about it in a few days.
+Other upcoming content So I have asked people to write a few post for me. In the near future I will put up:
+Review and small taster blog on dask (python related) My experiences with Haskell (oh boy!</description>
+    </item>
     
     <item>
       <title>A warm welcome</title>
