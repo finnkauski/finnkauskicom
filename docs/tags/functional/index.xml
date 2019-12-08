@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>functional on the.finest.art</title>
+    <link>/tags/functional/</link>
+    <description>Recent content in functional on the.finest.art</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/functional/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Arts adventures in functionland</title>
+      <link>/posts/adventures-in-functionland/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/adventures-in-functionland/</guid>
+      <description>Oh boy, where do we even start.
+My colleague, an ardent mathematician, kept telling me about functional programming for what basically is my whole programming life. I come from an economist background so for me the terms Object-Oriented and functional did not mean much. Also, I think early on in our journeys on the path to learn how to write code we don&#39;t concern ourselves with paradigms (which is what those terms meant).</description>
+    </item>
+    
+  </channel>
+</rss>
