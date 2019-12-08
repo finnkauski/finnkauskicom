@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>pipenv on the.finest.art</title>
-    <link>/tags/pipenv/</link>
+    <link>https://finnkauski.github.io/finnkauski.com/tags/pipenv/</link>
     <description>Recent content in pipenv on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/pipenv/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.github.io/finnkauski.com/tags/pipenv/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python climate change</title>
-      <link>/posts/python-climate-change/</link>
+      <link>https://finnkauski.github.io/finnkauski.com/posts/python-climate-change/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/python-climate-change/</guid>
+      <guid>https://finnkauski.github.io/finnkauski.com/posts/python-climate-change/</guid>
       <description>The Setup First of climate change is an insanely scary issue for everyone and should not be neglected! However, I want to talk about a different environment, a python environment.
 I recently got asked to talk about my environment management when I work in python. However if that person had read my first post on this page they would have noticed:
  &amp;ldquo;Pipenv: The Future of Python Dependency Management&amp;rdquo; - A splendid talk about how not to have a breakdown trying to run your python code on other peoples computers (aka sharing projects and proper dependency management)</description>

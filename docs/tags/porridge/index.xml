@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>porridge on the.finest.art</title>
-    <link>/tags/porridge/</link>
+    <link>https://finnkauski.github.io/finnkauski.com/tags/porridge/</link>
     <description>Recent content in porridge on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/porridge/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.github.io/finnkauski.com/tags/porridge/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python - Knowledge is porridge!</title>
-      <link>/posts/knowledge-is-porridge/</link>
+      <link>https://finnkauski.github.io/finnkauski.com/posts/knowledge-is-porridge/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/posts/knowledge-is-porridge/</guid>
+      <guid>https://finnkauski.github.io/finnkauski.com/posts/knowledge-is-porridge/</guid>
       <description>Intro Today I&#39;ll focus on python.
 As I am sure you will know that python is a general purpose programming language which is a commonly used tool to build data science pipelines, models etc.
 The following will be a few resources to watch and read that I believe to be worth your time. And below that you&#39;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
