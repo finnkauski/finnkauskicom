@@ -1,1 +1,1 @@
-web: hugo server -e "production" --port $PORT
+web: ./hugo server -e "production" --port $PORT
