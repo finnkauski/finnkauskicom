@@ -1,4 +1,4 @@
-baseurl = "https://finnkauski.github.io/finnkauskicom"
+baseurl = "http://finnkauski.github.io/finnkauskicom"
 languageCode = "en-us"
 theme = "m10c"
 paginate = 5
