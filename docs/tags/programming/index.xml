@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming on the.finest.art</title>
-    <link>https://finnkauski.github.io/finnkauski.com/tags/programming/</link>
+    <link>http://finnkauski.github.io/finnkauskicom/tags/programming/</link>
     <description>Recent content in programming on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://finnkauski.github.io/finnkauski.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://finnkauski.github.io/finnkauskicom/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Python climate change</title>
-      <link>https://finnkauski.github.io/finnkauski.com/posts/python-climate-change/</link>
+      <link>http://finnkauski.github.io/finnkauskicom/posts/python-climate-change/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://finnkauski.github.io/finnkauski.com/posts/python-climate-change/</guid>
+      <guid>http://finnkauski.github.io/finnkauskicom/posts/python-climate-change/</guid>
       <description>The Setup First of climate change is an insanely scary issue for everyone and should not be neglected! However, I want to talk about a different environment, a python environment.
 I recently got asked to talk about my environment management when I work in python. However if that person had read my first post on this page they would have noticed:
  &amp;ldquo;Pipenv: The Future of Python Dependency Management&amp;rdquo; - A splendid talk about how not to have a breakdown trying to run your python code on other peoples computers (aka sharing projects and proper dependency management)</description>
@@ -24,20 +24,20 @@ I recently got asked to talk about my environment management when I work in pyth
     
     <item>
       <title>Arts adventures in functionland</title>
-      <link>https://finnkauski.github.io/finnkauski.com/posts/adventures-in-functionland/</link>
+      <link>http://finnkauski.github.io/finnkauskicom/posts/adventures-in-functionland/</link>
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://finnkauski.github.io/finnkauski.com/posts/adventures-in-functionland/</guid>
+      <guid>http://finnkauski.github.io/finnkauskicom/posts/adventures-in-functionland/</guid>
       <description>Oh boy, where do we even start.
 My colleague, an ardent mathematician, kept telling me about functional programming for what basically is my whole programming life. I come from an economist background so for me the terms Object-Oriented and functional did not mean much. Also, I think early on in our journeys on the path to learn how to write code we don&#39;t concern ourselves with paradigms (which is what those terms meant).</description>
     </item>
     
     <item>
       <title>Python - Knowledge is porridge!</title>
-      <link>https://finnkauski.github.io/finnkauski.com/posts/knowledge-is-porridge/</link>
+      <link>http://finnkauski.github.io/finnkauskicom/posts/knowledge-is-porridge/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://finnkauski.github.io/finnkauski.com/posts/knowledge-is-porridge/</guid>
+      <guid>http://finnkauski.github.io/finnkauskicom/posts/knowledge-is-porridge/</guid>
       <description>Intro Today I&#39;ll focus on python.
 As I am sure you will know that python is a general purpose programming language which is a commonly used tool to build data science pipelines, models etc.
 The following will be a few resources to watch and read that I believe to be worth your time. And below that you&#39;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
