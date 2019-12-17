@@ -39,6 +39,13 @@ Optionally if people do sound interested we'll do a session on going through
 the [Rust Book](https://doc.rust-lang.org/book/) so people can get up to speed
 on what the hell RustLang is and more or less what is happening on the stream.
 
+# Schedule (hopefully)
+
+- 17th Dec - 7:30 pm+
+- 18th Dec - 7:30 pm+
+- 20th Dec - 4:30 pm+
+- 21th Dec - 2:00 pm+
+
 # Conclusion
 
 So if you're keen to watch some good ol' streaming and maybe even learn stuff,
