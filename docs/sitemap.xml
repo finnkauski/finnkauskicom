@@ -3,12 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://finnkauski.com/tags/general/</loc>
-    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
+    <loc>https://finnkauski.com/tags/coding/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://finnkauski.com/posts/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/programming/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/posts/streaming/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/streaming/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/twitch/</loc>
+    <lastmod>2019-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/general/</loc>
     <lastmod>2019-12-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -18,22 +53,7 @@
   </url>
   
   <url>
-    <loc>https://finnkauski.com/tags/</loc>
-    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/</loc>
-    <lastmod>2019-12-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://finnkauski.com/tags/pipenv/</loc>
-    <lastmod>2019-11-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/programming/</loc>
     <lastmod>2019-11-05T00:00:00+00:00</lastmod>
   </url>
   

@@ -6,10 +6,21 @@
     <description>Recent content in Posts on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 08 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://finnkauski.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Streaming</title>
+      <link>https://finnkauski.com/posts/streaming/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/posts/streaming/</guid>
+      <description>Hey folks! I recently got the urge to stream myself coding and programming. I am a keen learner and recently have been learning more and more Rust as a language for my hobbies and as an opportunity to develop.
+Click here to see my twitch profile and read on for the content that is coming up in the near future.
+Upcoming content The short term project I will be working towards is creating an app that connects my midi drums to my hue lights!</description>
+    </item>
     
     <item>
       <title>Quick update</title>
