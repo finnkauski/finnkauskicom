@@ -15,6 +15,9 @@ This is a showcase of a bit of software I've been writing.
 I am a newbie drummer and wanted to spice up some practice with a light show so
 this links the lights in my room (Philips HUE bulbs) with my drumkit.
 
+I haven't opened the repository for the codebase yet. But if there is demand I
+will tidy it up and put it on github.
+
 ## Demo:
 
 {{< youtube fEK2DofSwEE >}}

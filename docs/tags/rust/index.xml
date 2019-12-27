@@ -18,8 +18,8 @@
       
       <guid>https://finnkauski.com/posts/drue/</guid>
       <description>DRUE This is a showcase of a bit of software I&#39;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
-Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&#39;ve implemented:
- Change color - Reactive to your hits-per-minute (HPM):  orange when idle, 200+ HPM and you get blue 600+ HPM and you get red NOTE: these are sampled every 0.</description>
+I haven&#39;t opened the repository for the codebase yet. But if there is demand I will tidy it up and put it on github.
+Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&#39;ve implemented:</description>
     </item>
     
   </channel>
