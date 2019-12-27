@@ -6,10 +6,21 @@
     <description>Recent content in programming on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Dec 2019 20:59:38 +0000</lastBuildDate>
     
 	<atom:link href="https://finnkauski.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DRUE</title>
+      <link>https://finnkauski.com/posts/drue/</link>
+      <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/posts/drue/</guid>
+      <description>DRUE This is a showcase of a bit of software I&#39;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
+Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&#39;ve implemented:
+ Change color - Reactive to your hits-per-minute (HPM):  orange when idle, 200+ HPM and you get blue 600+ HPM and you get red NOTE: these are sampled every 0.</description>
+    </item>
     
     <item>
       <title>Streaming</title>

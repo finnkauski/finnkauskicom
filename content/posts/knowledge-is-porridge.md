@@ -65,8 +65,8 @@ October 14th 2019.
   python. Long story short. I wish I had this when I started, might have avoided
   this:
 
-  <img src="https://imgs.xkcd.com/comics/python_environment_2x.png"
-  style="width: 100%; height:auto;">
+  {{< figure src="https://imgs.xkcd.com/comics/python_environment_2x.png"
+  title="python environment management is a faff" >}}
 
 - [How to Round Numbers in Python](https://realpython.com/python-rounding/) -
   Rounding Up/Down/Half Up/Half Down/Half Away From Zero/Half To Even . . . if
@@ -96,9 +96,7 @@ does it in a very entertaining way.
 
 ### So you want to be a Python expert?
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/cKPlPJyQrt4"
-frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen></iframe>
+{{< youtube cKPlPJyQrt4 >}}
 
 **Why I like it?**
 
@@ -113,9 +111,7 @@ already in python.
 
 ### Top to down, left to right
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/BRn6UCw35og"
-frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen></iframe>
+{{< youtube BRn6UCw35og >}}
 
 **Why I like it?**
 
@@ -130,9 +126,7 @@ active member of the community. He is the only reason I made a Twitter account.
 
 ### Mental Game of Python
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/UANN2Eu6ZnM"
-frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen></iframe>
+{{< youtube UANN2Eu6ZnM >}}
 
 **Why I like it?**
 
@@ -141,9 +135,7 @@ And this is a prime example of where this is the case.
 
 ### Beyond PEP8 - Best practices for beautiful intelligible code
 
-<iframe width="100%" height="315" src="https://www.youtube.com/embed/wf-BqAjZb8M"
-frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
-picture-in-picture" allowfullscreen></iframe>
+{{< youtube wf-BqAjZb8M >}}
 
 **Why I like it?**
 
