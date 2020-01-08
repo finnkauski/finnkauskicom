@@ -9,6 +9,8 @@ description: "Exploring python environment management"
 showFullContent: false
 ---
 
+{{< mathjax >}}
+
 _Oh boy, where do we even start._
 
 My colleague, an ardent mathematician, kept telling me about functional

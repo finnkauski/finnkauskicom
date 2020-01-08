@@ -5,6 +5,7 @@ paginate = 5
 googleAnalytics = "UA-150010764-1"
 
 [markup]
+  math=true
   [markup.highlight]
     codeFences = true
     hl_Lines = ""
