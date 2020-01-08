@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Ramblings on style and pythonisms // the.finest.art</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Art Eidukas" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://finnkauski.com/css/main.min.66e0b38fe9ce7409c95342b51834429f06105abf6e01af2d5b3a6bac8d6cd6c6.css" />
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-150010764-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ramblings on style and pythonisms"/>
+<meta name="twitter:description" content="Motivation  If you get yourself into PEP8ing mode, what do you tend to see? You tend to see the PEP8 stuff and not what really matters.
+&ndash; Raymond Hettinger, 2015
+ Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&#39;ve seen numerous codebases written by people of varying ability and experience."/>
+
+    <meta property="og:title" content="Ramblings on style and pythonisms" />
+<meta property="og:description" content="Motivation  If you get yourself into PEP8ing mode, what do you tend to see? You tend to see the PEP8 stuff and not what really matters.
+&ndash; Raymond Hettinger, 2015
+ Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&#39;ve seen numerous codebases written by people of varying ability and experience." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/" />
+<meta property="article:published_time" content="2020-01-08T15:24:00+00:00" />
+<meta property="article:modified_time" content="2020-01-08T15:24:00+00:00" /><meta property="og:site_name" content="the.finest.art" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://finnkauski.com"><img class="app-header-avatar" src="https://i.imgur.com/7CJuxBB.jpg" alt="Art Eidukas" /></a>
+      <h1>the.finest.art</h1>
+      <p>Data, Code, Art</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/finnkauski" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.facebook.com/iwiivi" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>facebook</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://keybase.io/finnkauski" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Ramblings on style and pythonisms</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 8, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          16 min read
+        </div><div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+          <a class="tag" href="https://finnkauski.com/tags/python/">python</a><a class="tag" href="https://finnkauski.com/tags/programming/">programming</a><a class="tag" href="https://finnkauski.com/tags/standards/">standards</a></div></div>
+    </header>
+    <div class="post-content">
+      <h2 id="motivation">Motivation</h2>
+<blockquote>
+<p>If you get yourself into PEP8ing mode, what do you tend to see? You tend to see
+the PEP8 stuff and not what really matters.</p>
+<p>&ndash; Raymond Hettinger, 2015</p>
+</blockquote>
+<p>Firstly, I am by no means a python expert, but I have been using <code>python</code> since
+September 2015 (almost 4 years at the time of writing). In that time I've seen
+numerous codebases written by people of varying ability and experience. I have
+also worked in a development area which had a hard task of building
+infrastructure for a massive organization.</p>
+<p>As you use the language and hit your head into problem after problem, messy
+codebase after messy codebase you start to wonder if there is some form of best
+practice in writing consistent, clean and readable code.</p>
+<p>Some of you probably have been in a position of looking back at a codebase you
+wrote a while back and recoiling how untidy it is and how now you would `write
+it in a much nicer way`. And to avoid this situation in the future, you might
+have even jumped to your favorite search engine and tried looking for some
+community driven standards. If you live in `python-land` you'll inevitably
+stumble upon <strong>PEP8</strong>.</p>
+<p>From here, you may go choose to go down one of two extreme routes:</p>
+<ol>
+<li>
+<p><strong>The Great Dictator</strong>
+One of those people who are so militant about following this standard, that
+the ideology takes priority and it can impede long-term productivity. These
+people begin to demand more and more time allocated to nitpicking the
+smallest of issues never actually seeing the larger code issues that can
+hide within.</p>
+</li>
+<li>
+<p><strong>The Dude/Dudette</strong>
+Loves bowling, being a slacker. Hates having to do commenting, documenting code
+and sure as hell won't bother having nice versions control practices.
+Typically does what they want with a drink in their hand which might or might
+not contain a White Russian and when asked if they are aware of python coding
+standards they will just namedrop <strong>PEP8</strong> as if it was a junior python
+developer job interview and they want to hit the buzzword quota.</p>
+</li>
+</ol>
+<p>In my personal experience I've not met anyone on either of the two extremes.
+Most people will end up between the two, even if nobody wants to admit that
+they might be 1/5 dictator.</p>
+<p>You <em><strong>should</strong></em> read <strong>PEP8</strong>, internalize what you think will help you be clean and
+consistent within you codebase and then just move on. The coding standard
+quagmire is a hard one to navigate and it is why this write up essentially exists.
+I'm here to try to encourage you to be more pragmatic and critical about coding
+standards and to brain dump my thoughts on clean code in python.</p>
+<h2 id="thoughts-about-pep8">Thoughts about PEP8</h2>
+<p>Ahh, <code>Python Enhancement Proposal number 8</code>, or <strong>PEP8</strong> for short. Created on
+05-Jul-2001 to help establish a consistent way of styling your code. However in
+my experience, it has been misused to great extent. You see, the issue here is that
+people want nice and tidy python code, but by evangelically following this
+standard and not compromising with <strong>PEP8</strong> they sometimes introduce other, more
+glaring issues. Even <strong>worse</strong>, by reviewing other peoples code and focusing
+purely on the compliance with PEP8, people miss what is known as <em>unpythonic</em>
+code. In other words, code that can be made much tidier and clearer by
+leveraging python specific language features.</p>
+<p>Raymond Hettinger (python core developer) has a great talk (see <a href="https://www.youtube.com/watch?v=wf-BqAjZb8M">here</a>) about
+<strong>PEP8</strong> and how to write intelligible code. We will come back to some ideas
+expressed in this talk throughoutour coverage of <strong>PEP8</strong>. But before moving on
+I'd like raise a point that he makes early in the talk to set the scene:</p>
+<blockquote>
+<p>What you want is that the people who are struggling a little bit (with a coding
+problem) to overcome and deal with a problem and at some point become very
+effective. How can you prevent that outcome. Its easy! You give them some low
+hanging fruit, something to go do that seems productive but isn't. And one of
+those things is a certain PEP, located between 7 and 9.</p>
+</blockquote>
+<p>Also, I will be omitting quite a few guidelines as I cover <strong>PEP8</strong>, for the sake of
+simplifying this writeup. By cherry-picking which ones to present, I will give
+you fewer things to remember and more rule of thumb things to follow. Consider
+this as me doing the hard work to suggest which are the most important parts.
+You're welcome.</p>
+<p>The one key message I want to get across before we proceed is that I do not
+dislike <strong>PEP8</strong>. I think it's extremely useful, but I don't want people being
+militant about following every bit of advice it gives without considering it for
+their use case. Other than that I think everyone should read the PEP and
+internalise what it tries to preach.</p>
+<h3 id="a-note-on-consistency">A note on Consistency</h3>
+<p>The first line of the PEP8 introduction states:</p>
+<blockquote>
+<p><em>This document gives conventions for the Python code comprising the
+standard library in the main Python distribution.</em></p>
+</blockquote>
+<p>The key word there is `convention` which is defined in the Oxford English
+dictionary as: <em>A way in which something is usually done&rdquo;</em>. The key word <strong>there</strong>
+is <em>usually</em>. Consistency is important, but when consistency is not an option you
+should use your best judgement. Knowing when to be inconsistent, comes with time and
+experience so write code and get feedback.</p>
+<p>As Mr. Hettinger says, a lot of people skip this part and jump further into
+<strong>PEP8</strong>, but really this is a <strong><em>key</em></strong> message across <strong>PEP8</strong>, know which battles to
+fight and know which sacrifices to make to ensure consistency with PEP8
+across your code-base and your project.</p>
+<p>See <a href="https://www.python.org/dev/peps/pep-0008/#a-foolish-consistency-is-the-hobgoblin-of-little-minds">here</a> for yourself for a few cases where sacrificing style guide consistency
+might be preferred.</p>
+<h3 id="code-layout">Code Layout</h3>
+<ul>
+<li>
+<p>Indentation</p>
+<blockquote>
+<p><em>Use 4 spaces for indentation.</em></p>
+</blockquote>
+<p>I firmly believe that using 4 spaced indents for your python code has a
+significant impact on the readability of the code. Imagine having a piece of
+code aligned as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">function</span>(parameter):
+
+  result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> parameter:
+    <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>:
+      result<span style="color:#f92672">+</span><span style="color:#f92672">=</span>i
+    <span style="color:#66d9ef">else</span>:
+      <span style="color:#66d9ef">continue</span>
+
+  <span style="color:#66d9ef">return</span> result
+</code></pre></div><p>I don't know about you, but to me this seems a bit cramped. Refactoring your
+code as follows adds a bit more space and lets the eye clearly align and
+distinguish what level each line is at. And yes, I know you can get indentation
+guides in your fancy editor, but that won't be there for you when u want to
+quickly open this in Notepad or view it on GitHub.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">function</span>(parameter):
+
+    result <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> parameter:
+        <span style="color:#66d9ef">if</span> i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span>:
+            result<span style="color:#f92672">+</span><span style="color:#f92672">=</span>i
+        <span style="color:#66d9ef">else</span>:
+            <span style="color:#66d9ef">continue</span>
+
+    <span style="color:#66d9ef">return</span> result
+</code></pre></div><p>Note that things like the <code>if statement</code> and the code for each outcome is quite
+clearly indented and at least to my eye is easier to split out!</p>
+<p>The Indentation chapter of <strong>PEP8</strong> covers some more interesting choices for
+indenting function parameters etc. If you are interested, you can read more
+about it <a href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">here</a>.</p>
+</li>
+<li>
+<p>Tabs or Spaces?</p>
+<blockquote>
+<p><em>Spaces</em></p>
+</blockquote>
+<p>I think as tedious as it sounds, you should use spaces (ideally 4) for
+indentation. I think to make it simpler, a lot of modern text editors that are
+used in coding as well as full blown <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=3&amp;cad=rja&amp;uact=8&amp;ved=2ahUKEwi1keyUr-niAhX%5FQxUIHR41DhUQFjACegQIEhAG&amp;url=https%253A%252F%252Fen.wikipedia.org%252Fwiki%252FIntegrated%5Fdevelopment%5Fenvironment&amp;usg=AOvVaw26G%5FhSQrwphgc0qRbOs%5FUr">IDE</a>&lsquo;s will convert tabs into spaces for you
+if you ask them to (if not by default).</p>
+<p>The issue is that if you mix tabs and spaces (which might look the same to you,
+but aren't really the same thing to python), you might get a <strong>TabError</strong> and that's
+not something that you really want slowing you down when it is so easily avoidable.</p>
+</li>
+<li>
+<p>Maximum Line Length</p>
+<blockquote>
+<p><em>PEP8 says 79. I say 90-ish</em><sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+</blockquote>
+<p>Hettinger raises a great point (which admittedly is reflected in PEP8 once you
+read it more carefully) that militantly observing 79 character guidelines is
+sometimes isn't very sensible.</p>
+<p><strong>Indentation in python is important</strong>. So lets say we have a bit of code with a
+function and a few nested structures within the code. Something along the lines
+of:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">useful_function_name</span>(list_of_entries, <span style="color:#f92672">*</span><span style="color:#f92672">*</span>kwargs):
+    <span style="color:#66d9ef">for</span> list_of_subentries <span style="color:#f92672">in</span> list_of_entries:
+        <span style="color:#66d9ef">for</span> subentry <span style="color:#f92672">in</span> list_of_subentries:
+            <span style="color:#66d9ef">if</span> subentry <span style="color:#f92672">not</span> <span style="color:#f92672">in</span> some_global_list:
+                <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{} is not in the global list</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(subentry))
+            <span style="color:#66d9ef">else</span>:
+                some_global_list<span style="color:#f92672">.</span>append(another_useful_function(subentry))
+    <span style="color:#66d9ef">return</span> some_global_list
+</code></pre></div><p>And perhaps you could say that this bit of code is not a realistic example, but
+it serves to illustrate that by having descriptive variable and function names and
+using 4 space indentation makes the 79 character limit approach ever so
+quickly.</p>
+<p>So where does this leave us. Well we could go away and make the names of the
+functions and variables shorter, but we then sacrifice readability for some
+arbitrary number of characters. But guess what? Nobody is going to force you
+(although they could do it through <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">commit hooks</a> and <a href="https://pypi.org/project/black/">black</a>) to be consistent with
+that number, which gives you the space really to set your own limits for your
+own team.</p>
+<p>Modern monitors and resolutions are wide. We can spare a few more characters
+nowadays! However the key here is to keep the lines not too long and more
+importantly readable. So pick a sensible line length (something like 90
+characters perhaps just to add some space for indentation) and stick to it
+unless you absolutely must deviate.</p>
+</li>
+<li>
+<p>Blank Lines</p>
+<p>I don't really have much to say on this bit of the style guide. I think it lays
+out some sensible rules, but I do want to highlight this line:</p>
+<blockquote>
+<p>Use blank lines in functions, sparingly, to indicate logical sections.</p>
+</blockquote>
+<p>I think this is a really good piece of advice and if you take away something
+from this PEP8 suggestion on blank lines, it should probably be that.</p>
+</li>
+<li>
+<p>Imports</p>
+<blockquote>
+<ul>
+<li>Imports are always put at the top of the file, just after any module comments
+and docstrings, and before module globals and constants</li>
+<li>Wildcard imports (from <!-- raw HTML omitted --> import *) should be avoided</li>
+</ul>
+</blockquote>
+<p>Those 2 bits of advice I think are key, there are some other things you could
+learn by reading that section, but those are really the key things to follow.</p>
+<p>Imagine yourself opening a piece of code that someone else wrote. Now you scroll
+through it without thinking, take a sip of coffee and start tackling the task of
+understanding what it does. The first thing you want to know is what does it
+depend on? What kind of packages do I need? Well if that person followed
+sensible guidelines, you'd see it all in one place. Neat. On the other hand if
+the imports are scattered everywhere, you need to do the good ol&rsquo; <code>CTR+F</code> to
+actually get what you want and even then it would involve tons of jumping around
+through the file.</p>
+<p>Imports at the top. Always.</p>
+<p>Now the second bit of advice about imports with * is actually quite important. I
+won't even go into things like namespacing, but suffice it to say that when one
+reads through a codebase and stumbles upon a function that seems to be coming
+from nowhere, usually * is to blame. And even worse if someone used two or
+more * imports&hellip; well then you're in for a good ol&rsquo; search online through the
+package documentation (if you're lucky and that exists).</p>
+</li>
+</ul>
+<h3 id="pet-peeves-and-other-recommendations">Pet Peeves and other recommendations</h3>
+<p>The <a href="https://www.python.org/dev/peps/pep-0008/#pet-peeves">pet peeves and other recommendations</a> sections in PEP8 are quite sensible. I
+would go check them out as they give you a better idea of the &lsquo;little things&rsquo;
+that you could do to make your code better.</p>
+<h3 id="comments">Comments</h3>
+<blockquote>
+<p>Comments that contradict the code are worse than no comments. Always make a
+priority of keeping the comments up-to-date when the code changes!</p>
+</blockquote>
+<p>Again, the section on comments is actually really good and has a ton of useful
+content. However the highlighted bit there is really important. Keep your
+comments (and <a href="https://www.geeksforgeeks.org/python-docstrings/">docstrings</a> and any documentation) up to date!</p>
+<p>Avoid inline comments that say what the code does explicitly. If your code looks
+like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">validated_input <span style="color:#f92672">=</span> validate(some_text)
+</code></pre></div><p>You don't need to comment it. It wastes your time, someone elses time
+reading it, computers time, space, time, space-time&hellip;</p>
+<p>Anyway, if you write your code in a tidy, descriptive way you won't need inline
+comments that state what your code does. That said, a very sensible use-case for
+an inline comment would be explaining why we are doing something and how it will
+impact the outcome down the line. In the previous case there we could say:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">validated_input <span style="color:#f92672">=</span> validate(some_text) <span style="color:#75715e"># Validate input to avoid code injection</span>
+</code></pre></div><h3 id="docstrings">Docstrings</h3>
+<p>This deserves its own writeup, but suffice it to say that there is a separate <a href="https://www.python.org/dev/peps/pep-0257">PEP</a>
+that covers how to style those. My advice on this account is: <strong>USE THEM</strong>. Please
+go read about them, pick sensible guidelines on how to write them and use them.
+Future you and anyone who reads your code will thank you.</p>
+<p>I kept writing this post and decided to jump back up to this section and add a
+bit more emphasis on docstring. I think once you've written them once or twice
+given a chosen standard (I use the <a href="https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example%5Fnumpy.html">numpy</a> standard) it will soon become almost
+second nature. And it will <strong>ALWAYS</strong> be easier to write them straight after
+you've written the code that they relate to. Because (a) you have all the things
+it needs and does fresh in your head and (b) its much harder to not be
+complacent with missing documentation when you know that it is code you've
+written 3 months ago and it will be a faff figuring out what it does.</p>
+<h3 id="naming-conventions">Naming conventions</h3>
+<p>There is a lot to talk about here. As the <a href="https://www.python.org/dev/peps/pep-0008/#descriptive-naming-styles">Descriptive: Naming Styles</a> section of
+<strong>PEP8</strong> shows, there are a lot of ways to name your functions, variables etc. I
+personally use what is called snake case when I write in python meaning that I
+link words in my function names with underscores like so:</p>
+<pre><code class="language-language" data-lang="language">my_new_value = my_snake_case_function(old_value)
+</code></pre><p>In python for the most part, that is the recommended way to name things like
+variables and functions. In other languages, like <code>Rust</code>, you even get told off
+by the compiler for not doing that. That said its not the end of the world to
+use different conventions. I use CamelCase in <code>Haskell</code> for example as that is
+loosely the standard in that language.</p>
+<p>But even in python, you really have seperate conventions on what to name how.</p>
+<p>Exception names, typing variables and class names make use of upper case and
+capitalisation in python. And I think over time I realised that the naming
+conventions for the various python objects actually sensible and readable.
+The main reason that different types of objects have different styles is to make
+it much easier, at a glance, to know something about what you are looking at. As
+above, if you meet an object called <code>Guido</code> you know that it is a class of some
+kind where `guido` would instead be a function, a variable or a module.</p>
+<p>So not much to add here, go read that section and internalise that.</p>
+<h3 id="programming-recommendations">Programming Recommendations</h3>
+<p>Again, a great section. Well written, gives succinct and useful advice to people.
+But more importantly it does a bit more than just tell you how to style your
+code. It tells you how to write more <em>pythonic</em> code (which is really sort of
+the point of <strong>PEP8</strong> in a way).</p>
+<p>It is not a tutorial on how to code in python, but it definitely introduces a
+few concepts and how to use them in a sensible way to write more pythonic
+looking and functioning code.</p>
+<h2 id="the-shifting-sands-of-simple">The shifting sands of simple</h2>
+<p>This section of the blog is a bit of</p>
+<p>What does it mean to be <em>pythonic</em>?</p>
+<p>Let me give you a few example functions:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">example1</span>():
+    index <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">for</span> color <span style="color:#f92672">in</span> [<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">yellow</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">blue</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">red</span><span style="color:#e6db74">&#34;</span>]:
+        <span style="color:#66d9ef">print</span>(str(index) <span style="color:#f92672">+</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> </span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">+</span> color)
+        index <span style="color:#f92672">=</span> index <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+<span style="color:#75715e"># ------</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">example2</span>():
+    <span style="color:#66d9ef">for</span> index, color <span style="color:#f92672">in</span> enumerate([<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">yellow</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">blue</span><span style="color:#e6db74">&#34;</span>, <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">red</span><span style="color:#e6db74">&#34;</span>]):
+        <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{index + 1} {color}</span><span style="color:#e6db74">&#34;</span>)
+
+<span style="color:#75715e"># ------ for fun :)</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">example3</span>():
+    list(map(<span style="color:#66d9ef">lambda</span> tpl: <span style="color:#66d9ef">print</span>(f<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">{tpl[0]} {tpl[1]}</span><span style="color:#e6db74">&#34;</span>), enumerate([<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">yellow</span><span style="color:#e6db74">&#34;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">blue</span><span style="color:#e6db74">&#34;</span>,<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">red</span><span style="color:#e6db74">&#34;</span>])))
+</code></pre></div><p>Let's assume we don't care about efficiency in this function. We don't mind
+because it does such a minor thing in the grand scheme of our codebase.
+Under that assumption, both these functions will do the same job.</p>
+<p>They should <strong>not</strong> fail or have different results unless people use old versions
+of python, etc. But just by looking at them I can see which person has used python
+more.</p>
+<p>Now thats not to say that one is more right than another at this level, but
+purely from the way they have written the piece of code its clear that
+<strong>example2</strong> is leveraging a lot more of the python in-built tools than
+<strong>example1</strong> (if something in there is new to you I hope you go and check it out).</p>
+<p>`So what?` I can hear you say. Does that change much? Well as I am writing this
+these two are equivilent to me, but the second one looks tidier as it leverages
+things that are made to solve the required problems (like <a href="https://www.python.org/dev/peps/pep-0279/">enumerate</a>). This is
+what in my head it all boils down to. Over time you learn more about python, its
+features and what should feel `right` when it comes to code in python. You
+become more pythonic which to me means you start leveraging all the tools the
+language has to offer in their intended use cases.</p>
+<p>But whatever stage you are at, be it python wiz-kid, or just beginning with the
+language, try appreciating the perspective of others. Wiz kids, appreciate that
+sometime writing things out for others with more clear instructions could help
+the target audience and junior devs get their heads around it more clearly
+(<strong>example1</strong> is much easier to wrap your head around for someone new to python).</p>
+<p>And the newbies, that are just discovering python, accept that some thing written
+by people who have been doing it for a while will look much more concise and
+sometimes will involve features you don't know about. But don't take this
+sitting down, take the time when you can to look at these cryptic functions and
+features, understand what <strong>specific use case</strong> they are trying to address and
+incorporate them in your codebase.</p>
+<p>So to sort of pull this all together, if you know about python and already write
+pythonic code, think of who is going to read it and give them time to learn the
+features of python. And if you're the <strong>example1</strong> person, take the time when you
+see something come up that you haven't seen before to do a quick search online
+and see if you can learn more about the language itself.</p>
+<h2 id="solving-things-with-dirty-code">Solving things with dirty code</h2>
+<p>Now this is might be a contraversial section so I will keep it short. If you're
+ever opening up a text file and want to get the last few lines or if you're just
+opening a csv to save it to Excel, consider not worrying about code style at
+all.</p>
+<p>Hear me out. Learning how to write python code in a nice and tidy way takes
+time. And if you're solving a one-off problem that will never see the light of
+day and will sit in the depths of your <code>D:</code> drive, do it quick and simple. Dont
+worry about variable names, line length, docstrings etc. Just do it and move on.</p>
+<p>Over time as you write more and more public facing code you will internalise the
+bits of <strong>PEP8</strong> you need and the next time you do the csv to Excel conversion (because
+you lost the code in the cold depths of your hard drive), you will likely just
+write it in a nice and tidy way without even noticing.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Reading back through the blog I realise there is a lot in here. And I really
+want to perhaps stress 2 things from all of this:</p>
+<ul>
+<li>read the style guide, be critical and be disciplined</li>
+<li>take opportunities to write more code and learn more about <code>python</code> itself
+instead of focusing on line length</li>
+</ul>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Well, that's not really true as I stole this guideline from Mr. Hettingers talk. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

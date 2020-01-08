@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on the.finest.art</title>
+    <link>https://finnkauski.com/tags/</link>
+    <description>Recent content in Tags on the.finest.art</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Jan 2020 15:24:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://finnkauski.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>programming</title>
+      <link>https://finnkauski.com/tags/programming/</link>
+      <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://finnkauski.com/tags/python/</link>
+      <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>standards</title>
+      <link>https://finnkauski.com/tags/standards/</link>
+      <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/standards/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drums</title>
+      <link>https://finnkauski.com/tags/drums/</link>
+      <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/drums/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://finnkauski.com/tags/rust/</link>
+      <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/rust/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://finnkauski.com/tags/coding/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>streaming</title>
+      <link>https://finnkauski.com/tags/streaming/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/streaming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twitch</title>
+      <link>https://finnkauski.com/tags/twitch/</link>
+      <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/twitch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>general</title>
+      <link>https://finnkauski.com/tags/general/</link>
+      <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipenv</title>
+      <link>https://finnkauski.com/tags/pipenv/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/pipenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functional</title>
+      <link>https://finnkauski.com/tags/functional/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/functional/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>porridge</title>
+      <link>https://finnkauski.com/tags/porridge/</link>
+      <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/porridge/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
