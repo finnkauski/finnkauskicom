@@ -162,7 +162,7 @@ could write your own composition function like this:
 ```python
 def compose(outter, inner):
 #     0      1      2       3        4       5
-    return lambda *args, **kwargs*: outter(inner(x))
+    return lambda *args, **kwargs: outter(inner(x))
 ```
 
 There are nicer ways to do this but this is the simplest and fastest way I could
