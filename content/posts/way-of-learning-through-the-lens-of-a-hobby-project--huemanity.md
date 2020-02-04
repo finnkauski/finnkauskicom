@@ -32,9 +32,9 @@ This is fundamentally why I wanted to build it. Self motivation, plus a desire
 to create a fun downstream project for which the right library didn't exists.
 
 Now I am going to caveat my previous statement by saying that other Hue lights
-control `crate` (libraries) exist in Rust, but they seem to be out of date?
-For instance [philipshue](https://github.com/Orangenosecom/philipshue) and [hue.rs](https://github.com/kali/hue.rs) haven't had new updates in years. Ultimately
-even if they did I wanted more control, better serialisation etc.
+`crates` (libraries) exist in Rust, but they seem to be out of date? For
+instance [philipshue](https://github.com/Orangenosecom/philipshue) and [hue.rs](https://github.com/kali/hue.rs) haven't had new updates in years. Ultimately even
+if they did I wanted more control, better serialisation etc.
 
 ## Did I get what I wanted out? {#did-i-get-what-i-wanted-out}
 
