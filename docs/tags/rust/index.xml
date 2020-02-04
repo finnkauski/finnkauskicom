@@ -6,10 +6,22 @@
     <description>Recent content in rust on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 27 Dec 2019 20:59:38 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Feb 2020 13:18:00 +0000</lastBuildDate>
     
 	<atom:link href="https://finnkauski.com/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Way of learning through the lens of a hobby project (Huemanity)</title>
+      <link>https://finnkauski.com/posts/way-of-learning-through-the-lens-of-a-hobby-project-huemanity/</link>
+      <pubDate>Tue, 04 Feb 2020 13:18:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/posts/way-of-learning-through-the-lens-of-a-hobby-project-huemanity/</guid>
+      <description>TLDR; I&#39;ve been working on a new project recently which focuses on controlling Philips Hue lights from the command line. Did it because was not happy with the other CLI I used before.
+It is now out in an early form and needs people to contribute: get it here
+Why I built it? It is written in Rust and it was motivated by mainly 3 things:
+ I wanted to know how the Hue lights are controlled in my house and what the API is like to interact with.</description>
+    </item>
     
     <item>
       <title>Drue</title>

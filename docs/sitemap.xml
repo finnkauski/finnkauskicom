@@ -4,7 +4,57 @@
   
   <url>
     <loc>https://finnkauski.com/categories/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/hobby/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/categories/hobby/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/posts/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/programming/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/categories/programming/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/rust/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/categories/rust/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/posts/way-of-learning-through-the-lens-of-a-hobby-project-huemanity/</loc>
+    <lastmod>2020-02-04T13:18:00+00:00</lastmod>
   </url>
   
   <url>
@@ -13,27 +63,12 @@
   </url>
   
   <url>
-    <loc>https://finnkauski.com/posts/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/programming/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/categories/programming/</loc>
+    <loc>https://finnkauski.com/categories/python/</loc>
     <lastmod>2020-01-08T15:24:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://finnkauski.com/tags/python/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/categories/python/</loc>
     <lastmod>2020-01-08T15:24:00+00:00</lastmod>
   </url>
   
@@ -48,27 +83,12 @@
   </url>
   
   <url>
-    <loc>https://finnkauski.com/tags/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://finnkauski.com/posts/drue/</loc>
     <lastmod>2019-12-27T20:59:38+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://finnkauski.com/tags/drums/</loc>
-    <lastmod>2019-12-27T20:59:38+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/rust/</loc>
     <lastmod>2019-12-27T20:59:38+00:00</lastmod>
   </url>
   

@@ -3,7 +3,7 @@
   <head>
     <title>Arts adventures in functionland // the.finest.art</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.62.2" />
+    <meta name="generator" content="Hugo 0.60.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Art Eidukas" />
     <meta name="description" content="Exploring python environment management" />
@@ -38,7 +38,7 @@ if (!doNotTrack) {
   </head>
   <body>
     <header class="app-header">
-      <a href="https://finnkauski.com"><img class="app-header-avatar" src="https://i.imgur.com/udYAc6d.jpg" alt="Art Eidukas" /></a>
+      <a href="https://finnkauski.com"><img class="app-header-avatar" src="https://i.imgur.com/7CJuxBB.jpg" alt="Art Eidukas" /></a>
       <h1>the.finest.art</h1>
       <p>Data, Code, Art</p>
       <div class="app-header-social">
@@ -214,7 +214,7 @@ That is because that doesn't exist by default in python unfortunately. But you
 could write your own composition function like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compose</span>(outter, inner):
 <span style="color:#75715e">#     0      1      2       3        4       5</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">lambda</span> <span style="color:#f92672">*</span>args, <span style="color:#f92672">*</span><span style="color:#f92672">*</span>kwargs<span style="color:#f92672">*</span>: outter(inner(x))
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">lambda</span> <span style="color:#f92672">*</span>args, <span style="color:#f92672">*</span><span style="color:#f92672">*</span>kwargs: outter(inner(x))
 </code></pre></div><p>There are nicer ways to do this but this is the simplest and fastest way I could
 think of at the moment. Lets break it down!</p>
 <ol start="0">
