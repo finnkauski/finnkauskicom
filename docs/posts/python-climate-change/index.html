@@ -3,7 +3,7 @@
   <head>
     <title>Python climate change // the.finest.art</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.60.0" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Art Eidukas" />
     <meta name="description" content="Exploring python environment management" />
@@ -102,12 +102,12 @@ computers (aka sharing projects and proper dependency management)</p>
 <p>I still recommend going there and watching the whole talk about it, however I
 will expand on what <em>I use at the moment</em>.</p>
 <p>Now the reason I say at the moment is because the landscape for this stuff will
-change and has been changing, however I think we've reached a point where
-environment management for python couldn't be easier if you spend 10 minutes
+change and has been changing, however I think we&rsquo;ve reached a point where
+environment management for python couldn&rsquo;t be easier if you spend 10 minutes
 setting things up <strong>right</strong>.</p>
-<p><!-- raw HTML omitted -->(if you're hardcore you can skip this and use nix)<!-- raw HTML omitted --></p>
+<p><small>(if you&rsquo;re hardcore you can skip this and use nix)</small></p>
 <p>At the moment I will use a Unix like system as an example so Mac users and Linux
-users shouldn't have any issues. However you are likely to find the same tools
+users shouldn&rsquo;t have any issues. However you are likely to find the same tools
 on Windows that work in the same exact way.</p>
 <p>I will also assume you know a bit of python, meaning I can throw around terms
 like <code>pip</code> and not scare you off.</p>
@@ -122,7 +122,7 @@ Unix systems come with their own version of python. Now this python is there to
 make sure that the system itself can run things it needs to run in python.
 Meaning that if it has python scripts it needs to execute, this is what it would
 use to run.</p>
-<p>You don't want to mess with that.</p>
+<p>You don&rsquo;t want to mess with that.</p>
 <p>The easiest way to get python and be able to switch versions on the fly and
 update it super simply, is to use <a href="https://github.com/pyenv/pyenv">pyenv</a>. Make
 sure to look up the very neat
@@ -134,32 +134,32 @@ and Anaconda) by simply typing <code>pyenv install 3.9-dev</code> or <code>pyenv
 to see all the versions</li>
 <li>set a global version of python whenever you choose by running <code>pyenv global 3.7.6</code></li>
 <li>set local versions of python per folder! which is great for example if
-you've gotten some old code from a colleague and you need to run it as a one
-off and don't want to replace all those pesky print statements.</li>
+you&rsquo;ve gotten some old code from a colleague and you need to run it as a one
+off and don&rsquo;t want to replace all those pesky print statements.</li>
 </ul>
 <p>This. Is. Magical. Trust me. The ability to jump around is useful to no end and
 recently I used it when presenting the python gotchas to my colleagues as some
 of the cool mind-bending tricks no longer worked in 3.7.</p>
 <h2 id="pipenv">pipenv</h2>
-<p>Now. Once you've sorted your python and you can run stuff, the next step is to
+<p>Now. Once you&rsquo;ve sorted your python and you can run stuff, the next step is to
 actually figure out how to install packages. Whichever python version you
 install through <code>pyenv</code> will come with <code>pip</code> - the python package manager.</p>
 <p>Now you might get tempted to start installing tools and packages that you want
-to use straight away through <code>pip</code>. The issue with that is that you're
+to use straight away through <code>pip</code>. The issue with that is that you&rsquo;re
 installing everything to a global bucket.</p>
 <p><strong>Warning: Incoming horrible analogy!</strong></p>
 <p>Imagine <a href="https://en.wikipedia.org/wiki/Waterworld">Waterworld</a> the 1995, Kevin
 Costner movie about the whole world engulfed in water.</p>
 <p>Lets say you want to drink some water in that world, and instead of pouring
 fresh water into a cup and drinking from there, you pour it into the ocean then
-drink from the ocean. Now that's not pleasant as it gets mixed with all sorts of
-stuff. Don't get me wrong, its still drinkable in theory, but in practice it
+drink from the ocean. Now that&rsquo;s not pleasant as it gets mixed with all sorts of
+stuff. Don&rsquo;t get me wrong, its still drinkable in theory, but in practice it
 will likely make you ill.</p>
 <p>When you install a package without containing it, in whats called a virtual
-environment, you're essentially pouring yourself some fresh water to drink by
+environment, you&rsquo;re essentially pouring yourself some fresh water to drink by
 dumping it into the ocean instead of a cup. <code>pip install PACKAGE</code> will by
-default dump any packages into one massive, system-wide location. Which isn't
-great when someone else asks you to pass a cup of water as you can't unpick what
+default dump any packages into one massive, system-wide location. Which isn&rsquo;t
+great when someone else asks you to pass a cup of water as you can&rsquo;t unpick what
 you installed from what was already there from previous installations. In other
 words, telling someone what exactly they need from your massive set of packages
 to run your scripts is hard.</p>
@@ -170,7 +170,7 @@ of the other tools are just nice little wrappers and quality of life
 improvements around that basic tool.</p>
 <p>As I said, most tools just let you use <code>venv</code> in a more concise and easily
 accessible manner. Recently I have had my eye on <code>poetry</code> which has some nice
-little features, but as you saw from the title to this section we'll be focusing
+little features, but as you saw from the title to this section we&rsquo;ll be focusing
 on <code>pipenv</code>.</p>
 <p>Now <code>pipenv</code> is the recommended python dependency management tool as per the
 python documentation (at the time of writing). And I think for good reason. It
@@ -185,7 +185,7 @@ can run it.</p>
 <p>The first thing to do is to create the folder and <code>cd</code> into it. In the folder
 you then can type in <code>pipenv install SPACE_SEPARATED_LIST_OF_PACKAGES</code> this will
 create a new virtual environment <strong>linked to the folder name and location</strong>.</p>
-<p>You now have a virtual environment somewhere (you don't need to know where the
+<p>You now have a virtual environment somewhere (you don&rsquo;t need to know where the
 files for it live as pipenv will handle it for you). This virtual environment,
 once activated, will contain all your newly installed packages, assuming you
 install them within the virtual environment.</p>
@@ -194,7 +194,7 @@ live in your cosy new world, you need to run <code>pipenv shell</code> this will
 into a world of pure imagination. Where you no longer have access to the global
 packages you had before, but you will have access to the ones you installed in
 the previous command and will have the ability to <code>pipenv install</code> new ones
-without tainting your ocean. Note, please don't use <code>pip install</code> in your virtual
+without tainting your ocean. Note, please don&rsquo;t use <code>pip install</code> in your virtual
 environments and the more tech savvy devs check out the <code>--dev</code> option for pipenv
 ;)</p>
 <p>For the sake of completeness I will also briefly cover of how pipenv actually
@@ -251,7 +251,7 @@ virtual machine somewhere online to sit there until the <strong>HEAT DEATH OF TH
 UNIVERSE</strong>.</p>
 <p>&ldquo;What?&rdquo; I hear you say. Well imagine a situation where you are developing a
 website and it needs a database URL. Or lets say you have some API key
-that you don't want to include in your code as someone with access to your code
+that you don&rsquo;t want to include in your code as someone with access to your code
 on github can see the key and start using it as their own.</p>
 <p>In that case what you might want to consider is environment variables. Your
 shell and computer in general has variables that can be set for the whole system
@@ -259,13 +259,13 @@ and you can access those variables through python or any other languages. So if
 you set a variable (how you do this will depend on the Operating System)
 <strong>API_KEY=001123abc0987asd</strong> and another one <strong>DATABASE_URL=&hellip;/&hellip;/&hellip;</strong> you
 can then access these using the <code>os</code> package in python.</p>
-<p>Hence you haven't hard-coded these in your code anywhere and no malicious people
+<p>Hence you haven&rsquo;t hard-coded these in your code anywhere and no malicious people
 can start using any of this for their own purposes.</p>
 <p>Now, setting up these things is annoying in some cases. So there are tools like
 <code>dotenv</code> which allow you to load in these variables from a file, usually called
 a <code>.env</code> file. So in practice you could make a <code>.env</code>
 file, dump the aforementioned variables into it and load it in every time your
-code runs programmatically through the <code>dotenv</code>library for your language and you're
+code runs programmatically through the <code>dotenv</code>library for your language and you&rsquo;re
 set to go. But <code>pipenv</code> (and other similar tools for other languages) started
 including this <code>dotenv</code> stuff from the get go. Meaning that if you have a file
 called <code>.env</code> in your project directory and your jump into a <code>pipenv</code> shell or
@@ -275,11 +275,11 @@ of the <code>dotenv</code> package in your code and you can just use <code>os</c
 files assuming that they will be there. And once you deploy this to some other
 system, you will just have to make sure these variables exist in their environment.</p>
 <h1 id="the-prestige">The Prestige</h1>
-<p>Anywho, that's about the end of the post. To summarise, use <code>pyenv</code> to not mess up your
+<p>Anywho, that&rsquo;s about the end of the post. To summarise, use <code>pyenv</code> to not mess up your
 python installations and <code>pipenv</code> to manage your packages in a nice and tidy
 way.</p>
 <p>Read up more on it online, check out the link in the beginning of this blog
-or if you're unlucky enough to know me in person, come ask me more about it.</p>
+or if you&rsquo;re unlucky enough to know me in person, come ask me more about it.</p>
 
     </div>
     <div class="post-footer">

@@ -6,6 +6,10 @@ googleAnalytics = "UA-150010764-1"
 
 [markup]
   math=true
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+        unsafe = true
   [markup.highlight]
     codeFences = true
     hl_Lines = ""

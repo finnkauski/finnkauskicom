@@ -450,90 +450,205 @@ want to perhaps stress 2 things from all of this:
 *** Footnotes
 
 [fn:1] Well, that's not really true as I stole this guideline from Mr. Hettingers talk.
-** DONE Way of learning through the lens of a hobby project (Huemanity) :hobby:rust:programming:@programming:@rust:@hobby:
+** TODO Journey through the web for Data Scientists
 :PROPERTIES:
-:EXPORT_FILE_NAME: way-of-learning-through-the-lens-of-a-hobby-project--huemanity
-:EXPORT_DATE: [2020-02-04 Tue 13:18]
+:EXPORT_FILE_NAME: journey-through-the-web-for-data-scientists
+:EXPORT_DATE: [2020-02-12 Wed 20:00]
 :END:
 
-[[https://github.com/finnkauski/huemanity/raw/master/meta/logo.png]]
+*** Intro
+The tempo of these posts is going to escalate as I expect people to keep reading
+more about the subject if they want to. This is mainly to keep me motivated to
+write the content and for us to finish going through the good bits in good time.
 
-*** TLDR;
+This post will kick us off into this adventure by introducing the concepts of
+HTML and CSS in as much depth as you need to know to follow along. I am not a
+web developer so things like SCSS, React, Angular and so on are definitely out
+of scope.
 
-I've been working on a new project recently which focuses on controlling Philips
-Hue lights from the command line. Did it because was not happy with the other
-CLI I used before.
+Anyway let's kick it off.
 
-It is now out in an early form and needs people to contribute: [[https://github.com/finnkauski/huemanity][get it here]]
+*** HTML
 
-*** Why I built it?
+I won't cover the history of HTML, if you are interested in how it became what
+it is now and where it all started read this [[https://www.wired.com/1997/04/a-brief-history-of-html/][great article by Wired]].
 
-It is written in Rust and it was motivated by mainly 3 things:
-1. I wanted to know how the Hue lights are controlled in my house and what the
-   API is like to interact with.
-2. I have been working on another project which links my midi enabled electric
-   drumkit with my hue lights (check it out [[https://finnkauski.com/posts/drue/][here]])
-2. I had a [[https://github.com/bahamas10/hue-cli][JavaScript based tool]] that I used before. It was slow so I did not
-   want to us it for point =2=.
+What we are concerned about today is what HTML is, how we can start using it and
+where to find more information about. So let us follow that order in our
+explanations.
 
-This is fundamentally why I wanted to build it. Self motivation, plus a desire
-to create a fun downstream project for which the right library didn't exists.
+**** What is it?
 
-Now I am going to caveat my previous statement by saying that other Hue lights
-=crates= (libraries) exist in Rust, but they seem to be out of date? For
-instance [[https://github.com/Orangenosecom/philipshue][philipshue]] and [[https://github.com/kali/hue.rs][hue.rs]] haven't had new updates in years. Ultimately even
-if they did I wanted more control, better serialisation etc.
+Basically, imagine you are writing on a piece of paper something along the lines
+of a CV. Now you might want certain bits to stand out so you make the text
+larger. In other cases you want to add bullet points so you start adding little
+dots as you write down the list and so on.
 
-*** Did I get what I wanted out?
+Now as you write this down, instead of actually drawing (rendering) the text
+larger or adding these bullet points, you could just tag each bit of text with a
+flag saying: /"Oh, this is a bullet point"/ or /"Enlarge this heading"/.
+Essentially instead of putting the work in drawing it out yourself, you are just
+tagging bits of text with something that will tell however has to draw it out
+(your browser) how to draw (render) the CV.
 
-Yes.
+That fundamentally is whats called a /markup language/. There are many of them,
+some less cluttered than others. But HTML is king and here are a few snippets of
+it following along with out CV example:
 
-1. I definitely learned how the API works and how it is structured.
-2. Basically [[https://finnkauski.com/posts/drue/][drue]] worked out ok and I am developing it further and the
-   =huemanity= crate is been essential for that to work.
-3. I am slowly moving onto my new =huemanity= command line tool rather than
-   using the JavaScript implementation. Just to show you something quite cool
-   here are the time comparisons (very rudamentary) for the same command:
+#+BEGIN_SRC html
+<h1>Jack Torrance</h1>
 
-#+BEGIN_SRC
-❯ time hue lights
-  hue lights  0.10s user 0.03s system 87% cpu 0.146 total
-❯ time huemanity info
-  huemanity info  0.01s user 0.01s system 46% cpu 0.033 total
+<h2>Skills and Expertise</h2>
+<ul>
+  <li>Caretaking</li>
+  <li>Axes</li>
+  <li>Writting</li>
+</ul>
 #+END_SRC
 
-   But this is no surprise. Performance in Rust is sort of a selling point
-   anyways. And to be fair the gap in performance varies depending on what
-   command you are sending however Rust wins out every time I tried.
+=<h1></h1>= and =<h2></h2>= are headings. =h1= is going to be rendered in larger
+font and will be useful to make the name stand out. Similarly =h2= will also be
+rendered with some emphasis, but it will be smaller than =h1=. You can go right
+up to =h6=! Now, why are there two of them for every bit of text? Well as you
+can see we need to tell the browser where one tag ends and where another tag
+begins. Hence we call the tags that have =/= the closing tags.
 
-*** Lessons learned
+Anyway, =ul= stands for unordered list and represents an unordered list, hence
+the *ul* tag. =li= represents a list item, which once again is easy to remember
+because of the name. Anyway, if you can imagine tables, horizontal parting lines
+and so on these and many more are tags that you can put in your HTML. For a full
+list of tags check out [[https://developer.mozilla.org/en-US/docs/Web/HTML/Element][this page here]].
 
-As I am writings this I realise that this sort of formalised approach to
-learning is a great way to push out content and learn about things that might
-interest you.
+One thing we haven't covered yet is that HTML in principle (as well as other
+markup languages) are text. What I mean by that, is that when you look at HTML
+you can read it and if you know all the tags you can likely imagine what it will
+look like. So lets see what the html code above will look like if I incorporate
+it in the blog:
 
-1. Setting out loose but tangible and reachible learning outcomes
-2. Working towards the delivery of these through tangible projects
-3. Reflecting on what you've learned
+-----
+#+BEGIN_EXPORT html
+<h1>Jack Torrance</h1>
 
-I have also finally caved and tapped into the Rust community on =discord= which
-was super helpful and I regret not doing it sooner.
+<h2>Skills and Expertise</h2>
+<ul>
+  <li>Caretaking</li>
+  <li>Axes</li>
+  <li>Writting</li>
+</ul>
+#+END_EXPORT
+-----
+(note that I've added horizontal lines for separation)
 
-And finally I think the key bit here was having a goal or something personal
-that affects you. Tactility and this sort of personalisation of your projects
-can help you stay motivated. A guy who lives above me has made an app that takes
-some of his friends (?) bands vinyl releases and projects augument reality
-visuals to supplement the music onto the vinyl while its spinning.
+So that is fundamentally what you need to know about HTML (at least
+conceptually). If you want to be much more effective in HTML, you will need to
+learn more about what tags are available ([[https://www.imdb.com/title/tt0081505/][here]]) and how to manipulate them.
 
-That kind of personalisation of projects really helps you motivated as you can
-see the project affect the way you work, live or relax!
+***** The =<div>=
 
-*** Next post
+The one thing I still need to cover is the idea of nesting and the best and most
+useful thing to show you in that respect is the =div= element (elements is what
+we call parts of the page). The =div= crops up quite a lot and is basically a
+content divider. Lets say I wanted to /group/ all the things we wrote about
+skills. The best way to start is to /put it in a div/ like so:
 
-I keep telling people conflicting messages. But I think I'm set now on the topic
-of my next blog post. It will be on writting high performance algorithms in Rust
-and using them in Python. It is a topic I know a little about, but theres is more
-to learn and gaps to cover up. So this will be both useful for the wider
-community and myself.
+#+BEGIN_SRC html
+<h1>Jack Torrance</h1>
 
-Cheers!
+<div>
+<h2>Skills and Expertise</h2>
+<ul>
+  <li>Caretaking</li>
+  <li>Axes</li>
+  <li>Writting</li>
+</ul>
+</div>
+#+END_SRC
+
+Why is this important? Well when we get to CSS and styling and layout, the
+=<div>= will be one of the best tools in our arsenal to style and positions
+things in chunks. Conceptually it will not be rendered to anything special, if I
+showed you the page that comes out of the above HTML it would look the same as
+before, but what changed is the grouping, which allows us to treat the skills
+and experience list as one element. One can keep nesting with no issues which
+will once again come into play soon.
+
+***** Class and ID
+
+So lets say you have two lists on our CV. One could refer to skills and
+experience and the other perhaps to the educational background and past studies.
+How do we conceptually differentiate these 2 lists?
+
+To name individual elements of the HTML document we can give them a /unique/
+name like so:
+
+#+BEGIN_SRC html
+<ul id="skills">
+...
+</ul>
+<ul id="education">
+...
+</ul>
+#+END_SRC
+
+You can do this with the =<div>= element as well:
+
+#+BEGIN_SRC html
+<div id="skills">
+<ul>
+...
+</ul>
+</div>
+
+<div id="education">
+<ul>
+...
+</ul>
+</div>
+#+END_SRC
+
+Now we can later (in CSS) refer to them as unique things. But what if we want to
+group some elements into without putting them into a =<div>=? Here we stumble
+upon the second naming tool - the class.
+
+#+BEGIN_SRC html
+<div id="skills">
+<ul class="lists">
+...
+</ul>
+</div>
+
+<div id="education">
+<ul class="lists">
+...
+</ul>
+</div>
+#+END_SRC
+
+The distinction will become clearer later when we start looking at CSS, but
+fundamentally the ids allow us to tag elements with a unique name whereas
+classes allow us to group similar elements together.
+
+
+**** Sidetrack: Editing HTML and CSS
+
+As HTML (and CSS a we will soon find out) are just text documents, you can open
+up anything that can edit text and start writing HTML or CSS. To illustrate lets
+open the most basic text editing software you have. If you are on Windows open
+up Notepad and copy in the HTML snippet of the CV we had above.
+
+Save the text file as =index.html= (you don't have to name it like that but just
+roll with it) and make sure that the operating system you are using hasn't added
+things like =.txt= at the end (if it has, rename it to just =index.html=). If
+you then open this file in the browser, you will see you HTML rendered on
+screen. You can then edit the file, save, refresh the browser and bask in the
+glory of the HTML you created.
+
+
+*** CSS
+
+Cascading Style Sheets. We got the point where we can add the content to the
+page that we want by writing it in a text file and tagging bits with certain
+tags. The next step is then to edit them to fit our creative vision.
+
+There are several ways to do so and I will briefly fly through them from least
+convenient (except for small tweaks) to most convenient (for larger projects).

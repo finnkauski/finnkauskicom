@@ -6,35 +6,17 @@
     <description>Recent content in Tags on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2020 13:18:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 08 Jan 2020 15:24:00 +0000</lastBuildDate>
     
 	<atom:link href="https://finnkauski.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>hobby</title>
-      <link>https://finnkauski.com/tags/hobby/</link>
-      <pubDate>Tue, 04 Feb 2020 13:18:00 +0000</pubDate>
-      
-      <guid>https://finnkauski.com/tags/hobby/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>programming</title>
       <link>https://finnkauski.com/tags/programming/</link>
-      <pubDate>Tue, 04 Feb 2020 13:18:00 +0000</pubDate>
+      <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
       <guid>https://finnkauski.com/tags/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>rust</title>
-      <link>https://finnkauski.com/tags/rust/</link>
-      <pubDate>Tue, 04 Feb 2020 13:18:00 +0000</pubDate>
-      
-      <guid>https://finnkauski.com/tags/rust/</guid>
       <description></description>
     </item>
     
@@ -62,6 +44,15 @@
       <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
       
       <guid>https://finnkauski.com/tags/drums/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://finnkauski.com/tags/rust/</link>
+      <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/tags/rust/</guid>
       <description></description>
     </item>
     
