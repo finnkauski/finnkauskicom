@@ -1,4 +1,4 @@
-baseurl = "https://finnkauski.com"
+baseurl = "https://definest.art"
 languageCode = "en-us"
 theme = "m10c"
 paginate = 5
@@ -29,10 +29,6 @@ googleAnalytics = "UA-150010764-1"
   url = "https://github.com/finnkauski"
 
 [[params.social]]
-  name = "facebook"
-  url = "https://www.facebook.com/iwiivi"
-
-[[params.social]]
   name = "keybase"
   url = "https://keybase.io/finnkauski"
 
@@ -47,4 +43,4 @@ googleAnalytics = "UA-150010764-1"
   [languages.en]
     languageName = "English"
     title = "the.finest.art"
-    description = "Data, Code, Art"
+    description = "Just making stuff and sharing what I learn."

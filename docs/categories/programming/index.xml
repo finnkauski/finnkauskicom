@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming on the.finest.art</title>
-    <link>https://finnkauski.com/categories/programming/</link>
+    <link>https://definest.art/categories/programming/</link>
     <description>Recent content in programming on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2020 15:24:00 +0000</lastBuildDate>
     
-	<atom:link href="https://finnkauski.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://definest.art/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ramblings on style and pythonisms</title>
-      <link>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</link>
+      <link>https://definest.art/posts/ramblings_on_style_and_pythonisms/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</guid>
+      <guid>https://definest.art/posts/ramblings_on_style_and_pythonisms/</guid>
       <description>Motivation  If you get yourself into PEP8ing mode, what do you tend to see? You tend to see the PEP8 stuff and not what really matters.
 &amp;ndash; Raymond Hettinger, 2015
  Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&#39;ve seen numerous codebases written by people of varying ability and experience.</description>
