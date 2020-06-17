@@ -3,7 +3,7 @@
   <head>
     <title>Arts adventures in functionland // the.finest.art</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.64.1" />
+    <meta name="generator" content="Hugo 0.60.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Art Eidukas" />
     <meta name="description" content="Exploring python environment management" />
@@ -111,7 +111,7 @@ if (!doNotTrack) {
 programming for what basically is my whole programming life. I come from an
 economist background so for me the terms <code>Object-Oriented</code> and <code>functional</code> did
 not mean much. Also, I think early on in our journeys on the path to learn how
-to write code we don&rsquo;t concern ourselves with paradigms (which is what those
+to write code we don't concern ourselves with paradigms (which is what those
 terms meant).</p>
 <p>However, as you get better and better at the programming and stop worrying about
 indentation errors and learning syntax, your brain craves for what <a href="https://github.com/rhettinger">Raymond
@@ -124,16 +124,16 @@ learned a bit of <code>Haskell</code> which is a great functional programming la
 Basically the poster boy of functional programming. I will try to convey the
 lessons I learned from that to you in this blog thing and showcase some things
 in python that would allow you to do functional programming.</p>
-<p>Also I won&rsquo;t go into Object Oriented stuff. I think I&rsquo;m definitely not qualified
+<p>Also I won't go into Object Oriented stuff. I think I'm definitely not qualified
 to talk about all that. But my aim will be to talk why I at the very least
 started thinking more functionally about my code and hopefully make a case on
 why you should at least try it.</p>
 <h2 id="functional-programming">Functional Programming</h2>
-<p><strong>Disclaimer:</strong> This is how I understand the subject matter. I&rsquo;m not a math
+<p><strong>Disclaimer:</strong> This is how I understand the subject matter. I'm not a math
 scientist person. If you want more details heres the <a href="https://en.wikipedia.org/wiki/Functional_programming">wikipedia
 link</a> for convenience.</p>
-<p>Maths is something I love, but don&rsquo;t do well enough. So you could call me an
-enthusiastic cheerleader for maths. So I&rsquo;ll keep this light on the maths but
+<p>Maths is something I love, but don't do well enough. So you could call me an
+enthusiastic cheerleader for maths. So I'll keep this light on the maths but
 sprinkle in notation as and when.</p>
 <p>So what is a <code>function</code>? A function is something that associates every element
 of a set of inputs to a unique element of an output set. Or at least something
@@ -141,9 +141,9 @@ along those lines anyway. When it comes to the world outside of maths, a
 function in say python looks something like <code>func(input1, input2)</code>. Well in that
 case the inputs are mapped to an output (if nothing is returned it got mapped to
 the <code>None</code> value).</p>
-<p>Now python doesn&rsquo;t check what comes into the function versus what is <em>supposed</em> to
+<p>Now python doesn't check what comes into the function versus what is <em>supposed</em> to
 come into the function. Same goes for the output side which means as soon as it
-hits a snag, because you haven&rsquo;t passed the right things into it, will kick up a
+hits a snag, because you haven't passed the right things into it, will kick up a
 fuss (document your code). But I digress.</p>
 <p>Functional programming sort of forces you to think about your code as a set of
 functions. A program is then defined almost like this:</p>
@@ -153,13 +153,13 @@ function <code>h</code> which then does something to it (maps it to some output)
 this is done it then passes whatever comes out of it to the next function (<code>z</code>
 in this case). Let me rewrite this with more relatable names</p>
 <p>$$publish(report(clean(load(filepath))))$$</p>
-<p>One great thing when your code conceptually looks like this (if you&rsquo;re say a
+<p>One great thing when your code conceptually looks like this (if you're say a
 data scientist or someone building pipelines) is that you get a nice flow of
 data or any other input through your system in pipeline. Say I forgot a step
 (and I did) of creating statistics before I generate my report. Well the simple
 way of fixing this issue in our little functional world is to simply insert
 another function. You know what has to come in and what has to come out in each
-stage after all so if you respect that flow you&rsquo;re all set to go!</p>
+stage after all so if you respect that flow you're all set to go!</p>
 <p>After adding that extra step we get:</p>
 <p>$$publish(report(stats(clean(load(filepath)))))$$</p>
 <p>Before we rush off and start looking at python I think its important to bring up
@@ -167,7 +167,7 @@ the concept of <code>composition</code>. As you might have seen writing all of t
 brackets constantly is annoying and for larger programs it would get more and
 more annoying over time. This is where composition comes in handy.</p>
 <p>Composition essentially allows you to join functions together into a much larger
-function (basically what we&rsquo;ve been doing to write our &lsquo;pipeline&rsquo;). In maths you
+function (basically what we've been doing to write our &lsquo;pipeline&rsquo;). In maths you
 would show composition like this:</p>
 <p>$$f \circ g$$</p>
 <p>which is identical to</p>
@@ -199,18 +199,18 @@ $$</p>
 <h2 id="partial-functions">Partial Functions</h2>
 <p>Another common (and useful!) concept to be aware off is <code>partial</code> functions. As
 you may or may not know you can pass in default arguments when you define
-functions in python. Meaning that if you don&rsquo;t pass values for a given
+functions in python. Meaning that if you don't pass values for a given
 parameter, it will fill it with defaults. Similarly if you are using a function
 over and over and need to pass in the same arguments over and over, might as
 well create a prefilled version of it!</p>
-<p>We&rsquo;ll cover how this is done in python later and it will be much clearer!</p>
+<p>We'll cover how this is done in python later and it will be much clearer!</p>
 <h2 id="functional-stuff-in-python">Functional stuff in python</h2>
 <p>By now you might be quite annoyed by all the abstract stuff. So for the
 sake of actually having some python in here lets translate our pipeline to
 python.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">publish(report(stats(clean(load(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">data.csv</span><span style="color:#e6db74">&#34;</span>)))))
 </code></pre></div><p>The more eagle-eyed among you might have realised I am not using composition.
-That is because that doesn&rsquo;t exist by default in python unfortunately. But you
+That is because that doesn't exist by default in python unfortunately. But you
 could write your own composition function like this:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">compose</span>(outter, inner):
 <span style="color:#75715e">#     0      1      2       3        4       5</span>
@@ -224,7 +224,7 @@ think of at the moment. Lets break it down!</p>
 <li>the <code>**kwargs</code> will contain any <code>key=value</code> style arguments (keyword
 arguments)</li>
 <li>thats the outter function</li>
-<li>is the inner function that we&rsquo;re wrapping up</li>
+<li>is the inner function that we're wrapping up</li>
 </ol>
 <p>Neat. There are nicer and more user friendly composition functions we can create
 but for the sake of our little exploration that one is just a nice and simple
@@ -238,12 +238,12 @@ squared values from 1 to 3 (see Map section above) easily like so</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">[square(val) <span style="color:#66d9ef">for</span> val <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">4</span>)]
 </code></pre></div><p>Now the issue is that when you get to ranges or data that is really large, you
 are in essence creating a maaaaasive array in memory. What if I wanted to create
-an array and the filter out the values that I don&rsquo;t need. Well generators come
+an array and the filter out the values that I don't need. Well generators come
 in handy!</p>
 <p>A generator is basically what it says in the name, it is a procedure or object
 that will generate certain values. Say we had a generator that would generate
 square values and as we looped through it would give us the square of the next
-number. Now it doesn&rsquo;t have all these values in memory. It just knows how to get
+number. Now it doesn't have all these values in memory. It just knows how to get
 the next one and the one after. If we had such as thing, then we could filter
 our values as we go along rather than create a massive array and then filter.</p>
 <p>Funny enough, <code>map</code> as a function already exist in python and is a generator!</p>
@@ -261,7 +261,7 @@ to keep using the function supplied and in this case it would!</p>
 </code></pre></div><p>We can then use the map and the filter together!</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">filter(<span style="color:#66d9ef">lambda</span> x: x <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>, map(square, range(<span style="color:#ae81ff">42</span>)))
 </code></pre></div><p>This will run instantly, but unless you pass the resulting generator into a
-<code>list</code> function, or loop through it in some other way, you&rsquo;ll be stuck with a
+<code>list</code> function, or loop through it in some other way, you'll be stuck with a
 <code>filter</code> object.</p>
 <h3 id="functools-itertools-and-other-nice-things">Functools, Itertools and other nice things</h3>
 <p>So where do all these functional things sit in python? Well things like <code>map</code>,
@@ -269,14 +269,14 @@ to keep using the function supplied and in this case it would!</p>
 imports. However python has 2 libraries <code>functools</code> and <code>itertools</code> that will
 cover you for quite a lot of the functional programming needs.</p>
 <p>Why <code>itertools</code>? Well, as you learn more functional programming and use more of
-it you&rsquo;ll eventually see that you need to use <code>for</code> loops and such, however all
+it you'll eventually see that you need to use <code>for</code> loops and such, however all
 the clever tools in itertools will help you create useful iterators that you can
 apply functions to instead of looping in the traditional sense of <code>for</code> and
 <code>while</code> loops.</p>
 <p>The other little package I would like to highlight is
 <a href="https://github.com/pytoolz/toolz">toolz</a>. This package is like itertools and
 functools in one and on steroids. It has a nice little drop in replacement
-called <code>cytoolz</code>, but I&rsquo;ll leave the googling to you. <code>toolz</code> is great as it has
+called <code>cytoolz</code>, but I'll leave the googling to you. <code>toolz</code> is great as it has
 things that make doing functional programming much easier, like a nice <code>compose</code>
 function that we already covered.</p>
 <p><code>functools</code> and <code>toolz</code> have in them tons of stuff but one thing I promised to
@@ -300,22 +300,22 @@ always. In a world where this is true in programming, there would be much less
 coding errors.</p>
 <p>The basic idea is that a maths function would not depend if some file exists on
 disk. In programming, you need to read files sometimes and they could be
-missing, hence you&rsquo;d get an error! Oh no! You want to limit those or at least
+missing, hence you'd get an error! Oh no! You want to limit those or at least
 know where they can happen! Reading files and writing files, connecting to
 databases basically relying on and changing state outside of your pipeline can
 cause issues and make your functions not behave like maths functions!</p>
 <p>This becomes an issue if you run things out of order for example. So keeping
 your side effect heavy functions segregated and clearly labelled as such etc will
 save you a headache or two in future.</p>
-<p>I think I haven&rsquo;t explicitly stated this, but you might infer this (and
+<p>I think I haven't explicitly stated this, but you might infer this (and
 definitely realise this when you work in FP), another property of the maths
 functions is that one thing comes in one comes out. Conceptually. If you stick
-with this and avoid coding in side effects where you don&rsquo;t need to you&rsquo;ll be
+with this and avoid coding in side effects where you don't need to you'll be
 better off.</p>
 <h2 id="summary">Summary</h2>
 <p>This whole post is a massive simplication. Massive simpliciation! Of a subject
 matter that is quite expansive. I think if you are keen to learn some of the
-things I&rsquo;ve described here, <em>go learn haskell</em>. And if you are tempted to give
+things I've described here, <em>go learn haskell</em>. And if you are tempted to give
 it a bash read <a href="http://haskellbook.com/">the Haskell Book</a></p>
 <p>Anyway, fascinating subject, useful for data scientists (easy pipelining) and
 super usefull to think about in order to maintain the potential points of

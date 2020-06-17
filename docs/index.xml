@@ -6,10 +6,29 @@
     <description>Recent content on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 Jan 2020 15:24:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2020 10:36:00 +0100</lastBuildDate>
     
 	<atom:link href="https://finnkauski.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Parser combinators</title>
+      <link>https://finnkauski.com/posts/parser-combinators/</link>
+      <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
+      
+      <guid>https://finnkauski.com/posts/parser-combinators/</guid>
+      <description>Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it).</description>
+    </item>
+    
+    <item>
+      <title>Journey through the web for Data Scientists</title>
+      <link>https://finnkauski.com/posts/journey-through-the-web-for-data-scientists/</link>
+      <pubDate>Wed, 12 Feb 2020 20:00:00 +0000</pubDate>
+      
+      <guid>https://finnkauski.com/posts/journey-through-the-web-for-data-scientists/</guid>
+      <description>Intro The tempo of these posts is going to escalate as I expect people to keep reading more about the subject if they want to. This is mainly to keep me motivated to write the content and for us to finish going through the good bits in good time.
+This post will kick us off into this adventure by introducing the concepts of HTML and CSS in as much depth as you need to know to follow along.</description>
+    </item>
     
     <item>
       <title>Ramblings on style and pythonisms</title>
@@ -19,7 +38,7 @@
       <guid>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</guid>
       <description>Motivation  If you get yourself into PEP8ing mode, what do you tend to see? You tend to see the PEP8 stuff and not what really matters.
 &amp;ndash; Raymond Hettinger, 2015
- Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&amp;rsquo;ve seen numerous codebases written by people of varying ability and experience.</description>
+ Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&#39;ve seen numerous codebases written by people of varying ability and experience.</description>
     </item>
     
     <item>
@@ -28,9 +47,9 @@
       <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
       
       <guid>https://finnkauski.com/posts/drue/</guid>
-      <description>drue This is a showcase of a bit of software I&amp;rsquo;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
-I haven&amp;rsquo;t opened the repository for the codebase yet. But if there is demand I will tidy it up and put it on github.
-Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&amp;rsquo;ve implemented:</description>
+      <description>drue This is a showcase of a bit of software I&#39;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
+I haven&#39;t opened the repository for the codebase yet. But if there is demand I will tidy it up and put it on github.
+Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&#39;ve implemented:</description>
     </item>
     
     <item>
@@ -83,9 +102,9 @@ My colleague, an ardent mathematician, kept telling me about functional programm
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://finnkauski.com/posts/knowledge-is-porridge/</guid>
-      <description>Intro Today I&amp;rsquo;ll focus on python.
+      <description>Intro Today I&#39;ll focus on python.
 As I am sure you will know that python is a general purpose programming language which is a commonly used tool to build data science pipelines, models etc.
-The following will be a few resources to watch and read that I believe to be worth your time. And below that you&amp;rsquo;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
+The following will be a few resources to watch and read that I believe to be worth your time. And below that you&#39;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
     </item>
     
     <item>

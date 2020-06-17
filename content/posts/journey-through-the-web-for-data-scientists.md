@@ -18,7 +18,6 @@ of scope.
 
 Anyway let's kick it off.
 
-
 ## HTML {#html}
 
 I won't cover the history of HTML, if you are interested in how it became what
@@ -27,7 +26,6 @@ it is now and where it all started read this [great article by Wired](https://ww
 What we are concerned about today is what HTML is, how we can start using it and
 where to find more information about. So let us follow that order in our
 explanations.
-
 
 ### What is it? {#what-is-it}
 
@@ -96,7 +94,6 @@ So that is fundamentally what you need to know about HTML (at least
 conceptually). If you want to be much more effective in HTML, you will need to
 learn more about what tags are available ([here](https://www.imdb.com/title/tt0081505/)) and how to manipulate them.
 
-
 #### The `<div>` {#the-div}
 
 The one thing I still need to cover is the idea of nesting and the best and most
@@ -109,12 +106,12 @@ skills. The best way to start is to _put it in a div_ like so:
 <h1>Jack Torrance</h1>
 
 <div>
-<h2>Skills and Expertise</h2>
-<ul>
-  <li>Caretaking</li>
-  <li>Axes</li>
-  <li>Writting</li>
-</ul>
+  <h2>Skills and Expertise</h2>
+  <ul>
+    <li>Caretaking</li>
+    <li>Axes</li>
+    <li>Writting</li>
+  </ul>
 </div>
 ```
 
@@ -125,7 +122,6 @@ showed you the page that comes out of the above HTML it would look the same as
 before, but what changed is the grouping, which allows us to treat the skills
 and experience list as one element. One can keep nesting with no issues which
 will once again come into play soon.
-
 
 #### Class and ID {#class-and-id}
 
@@ -138,10 +134,10 @@ name like so:
 
 ```html
 <ul id="skills">
-...
+  ...
 </ul>
 <ul id="education">
-...
+  ...
 </ul>
 ```
 
@@ -149,15 +145,15 @@ You can do this with the `<div>` element as well:
 
 ```html
 <div id="skills">
-<ul>
-...
-</ul>
+  <ul>
+    ...
+  </ul>
 </div>
 
 <div id="education">
-<ul>
-...
-</ul>
+  <ul>
+    ...
+  </ul>
 </div>
 ```
 
@@ -167,22 +163,21 @@ upon the second naming tool - the class.
 
 ```html
 <div id="skills">
-<ul class="lists">
-...
-</ul>
+  <ul class="lists">
+    ...
+  </ul>
 </div>
 
 <div id="education">
-<ul class="lists">
-...
-</ul>
+  <ul class="lists">
+    ...
+  </ul>
 </div>
 ```
 
 The distinction will become clearer later when we start looking at CSS, but
 fundamentally the ids allow us to tag elements with a unique name whereas
 classes allow us to group similar elements together.
-
 
 ### Sidetrack: Editing HTML and CSS {#sidetrack-editing-html-and-css}
 
@@ -198,5 +193,11 @@ you then open this file in the browser, you will see you HTML rendered on
 screen. You can then edit the file, save, refresh the browser and bask in the
 glory of the HTML you created.
 
-
 ## CSS {#css}
+
+Cascading Style Sheets. We got the point where we can add the content to the
+page that we want by writing it in a text file and tagging bits with certain
+tags. The next step is then to edit them to fit our creative vision.
+
+There are several ways to do so and I will briefly fly through them from least
+convenient (except for small tweaks) to most convenient (for larger projects).

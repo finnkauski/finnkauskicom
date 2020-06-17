@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Parser combinators // the.finest.art</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.60.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Art Eidukas" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://finnkauski.com/css/main.min.66e0b38fe9ce7409c95342b51834429f06105abf6e01af2d5b3a6bac8d6cd6c6.css" />
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-150010764-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Parser combinators"/>
+<meta name="twitter:description" content="Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it)."/>
+
+    <meta property="og:title" content="Parser combinators" />
+<meta property="og:description" content="Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://finnkauski.com/posts/parser-combinators/" />
+<meta property="article:published_time" content="2020-06-17T10:36:00+01:00" />
+<meta property="article:modified_time" content="2020-06-17T10:36:00+01:00" /><meta property="og:site_name" content="the.finest.art" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://finnkauski.com"><img class="app-header-avatar" src="https://i.imgur.com/7CJuxBB.jpg" alt="Art Eidukas" /></a>
+      <h1>the.finest.art</h1>
+      <p>Data, Code, Art</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/finnkauski" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.facebook.com/iwiivi" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-facebook">
+  <title>facebook</title>
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://keybase.io/finnkauski" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Parser combinators</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 17, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          10 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <h2 id="introduction">Introduction</h2>
+<p>These are truly weird times. Those who are fortunate enough to have
+spare time and not be troubled by the horrors and consequences of the pandemic
+are be finding themselves spending a lot more time at home trying to occupy
+themselves. What really resonated with me is this <a href="https://www.youtube.com/watch?v=snAhsXyO3Ck">great video</a> by CGP Grey which
+reminded me that we need to get out of this situation better than we went in (if
+personal circumstances allow it).</p>
+<p>Hobby projects are a great way to learn new skills and I always encourage all
+the people I work with to keep building <code>STUFF</code> (but thats maybe just me being
+<a href="https://www.youtube.com/watch?v=u6XAPnuFjJc">mastery driven</a>).</p>
+<p>This post will cover a recent project of mine on parser combinators which is a
+hobby project that allowed me to learn stuff during lockdown.</p>
+<h2 id="motivation">Motivation</h2>
+<p>I spent some time learning Haskell a while back and one of the great pieces of
+software written in Haskell is <a href="https://pandoc.org/">Pandoc</a>. Pandoc is a file format converter
+allowing you to convert files from one markup to another with ease<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</p>
+<p>Pandoc (as far as I understand) uses <span class="underline">parser combinators</span> to parse different
+formats and convert them between each other. I saw this concept of parser
+combinators also pop up in the <a href="https://haskellbook.com/">haskell book</a> that I used to teach myself the
+language. Lastly, it popped up as a video a while back in <a href="https://www.youtube.com/watch?v=N9RUqGYuGfw">Tsoding's video on
+writing a JSON parser in 111 lines of haskell code</a>.</p>
+<p>I finally caved and decided to write a simple scripting language (if you can
+call it that) for scripting my lights<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Check it out <a href="https://github.com/finnkauski/lightshow">here</a>.</p>
+<p>Note that I will introduce the concepts, but I don't think I can teach and
+provide in depth explanations for them. Mainly because I don't know them well
+enough to do it justice. And also do keep in mind that there is probably a
+parser combinator library in most languages (and if not, go write it) and you
+will have to find that library yourself.</p>
+<p>We won't be implementing parsers from scratch, if you are curious and want to
+have a bash in implementing this from scratch, here are the 2 resources that I
+followed along with that helped me:</p>
+<ol>
+<li><a href="https://bodil.lol/parser-combinators/">Learning Parser Combinators With Rust</a></li>
+<li><a href="https://www.youtube.com/watch?v=N9RUqGYuGfw">Tsodings JSON parser from scratch in 111 lines</a></li>
+</ol>
+<h2 id="parsers">Parsers</h2>
+<p>Firstly, let's cover what a parser is. In simple words, parser is:</p>
+<ol>
+<li>
+<p>A callable object (usually a function)</p>
+</li>
+<li>
+<p>The types signature of which would be something along the lines o<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>f</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">   parser <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Either</span> <span style="color:#66d9ef">SomeStructure</span> <span style="color:#66d9ef">ParsingError</span>
+</code></pre></div><p>Essentially it takes in some string data (or a stream of bytes or whatever
+else you choose to represent your text in) and spits out either a structure
+build from that text or an error if it fails to parse it.</p>
+</li>
+</ol>
+<p>So the key concept here is that a parser can <strong>fail</strong> or it can return a parsed
+object that you are after alongside whatever else it didn't parse.
+To clarify that last bit, often parsers return not only the structure that they
+parse, but also the rest of the input that was left after they extracted that
+structure.</p>
+<p>For example if our parser <code>alphanumeric1</code> is able to parse a arbitrary length
+alphanumeric string of length 1 or more, and then we apply it to a string we
+might get something along the lines of the following:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#a6e22e">alphanumeric1</span> <span style="color:#f92672">::</span> <span style="color:#66d9ef">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">Either</span> (<span style="color:#66d9ef">RestOfInput</span>, <span style="color:#66d9ef">ParsedStructure</span>) <span style="color:#66d9ef">ParsingError</span>
+<span style="color:#a6e22e">alphanumeric1</span> <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
+
+<span style="color:#a6e22e">inputString</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Hello how are you doing?</span><span style="color:#e6db74">&#34;</span>
+
+<span style="color:#a6e22e">alphanumeric</span> inputString
+<span style="color:#75715e">-- Output: Left (&#34; how are you doing?&#34;, &#34;Hello&#34;)</span>
+<span style="color:#75715e">-- Note: our parser in this example doesn&#39;t handle spaces</span>
+</code></pre></div><p>Other common parsers could be something along the lines of <code>multispace0</code> which
+could parse 0 or more of anything that we consider as a space (tabs, newline,
+regular spaces). Or a parser that parses a specific <code>tag</code> of our choice for
+example <code>{</code> or <code>}</code>.</p>
+<p>Thats neat, but on its own these parsers are very small and useless. This is
+where the concepts of <span class="underline">parser combinators</span> come into play.</p>
+<h2 id="parser-combinators">Parser combinators</h2>
+<p>Firstly, lets set out the scene where we will use combinators and then it will
+be easier to explain what they are and why we need them but in short a
+combinator is a way to combine multiple parsers into a larger parser.</p>
+<p>Also let us move away from Haskell and its beautifully clean syntax and start
+looking at Rust which is what I used to implement my small scripting language.</p>
+<p>Now for our case lets first check out the syntax for the language I was
+implementing.</p>
+<pre><code class="language-nil" data-lang="nil">c: seq = {
+    color ff0000;
+    wait 1;
+    blink 2 1 ff0000;
+    wait 1;
+    color 0000ff;
+};
+a: act = color 00ff00;
+trigger c;
+trigger a;
+</code></pre><p>Without going into detail, I wanted to have the following:</p>
+<ol>
+<li>a set of actions that the lights could perform - blink, change color, wait etc.</li>
+<li>a way to store sequences of actions - the <code>c: seq</code></li>
+<li>a way to store single actions - the <code>a: act</code></li>
+<li>a way trigger these stored actions</li>
+</ol>
+<p>Now perhaps its not the most comprehensive and turing complete language, but it
+served its purpose of being a lighthearted application for learning how to do
+parser combinators.</p>
+<p>Back to our parsers! Firstly lets explore how I parse a single command e.g.
+<code>color ff0000;</code>. Deconstructing its constituent parts we get:</p>
+<ul>
+<li>the word: <code>color</code></li>
+<li>followed by one of more spaces</li>
+<li>a color string which is the main bit we want</li>
+<li>followed by a colon</li>
+<li>followed by optional newline or spaces</li>
+</ul>
+<p><a href="https://crates.io/crates/nom">nom</a> - a Rust library that provides speedy parser combinators has quite a few
+parsers already implemented. The <code>tag</code> parser can be used to parse the word
+&lsquo;color&rsquo;, the <code>hex_digit1</code> parser will help us deal with a string of hex values
+for our color string, <code>space1</code> will help us parse 1 or more spaces and finally
+we'll use <code>tag</code> again to deal with the colon. We will skip the newline for now.</p>
+<p>Lets look at how the simplified parser implementation for color looks like and
+decompose it into both the parsers we described above and the combinators we use.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">color</span>(i: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">IResult</span><span style="color:#f92672">&lt;</span><span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> {
+    <span style="color:#66d9ef">let</span> identifier <span style="color:#f92672">=</span> preceded(tag(<span style="color:#e6db74">&#34;color&#34;</span>), space1);
+    <span style="color:#66d9ef">let</span> color_string <span style="color:#f92672">=</span> preceded(identifier, hex_digit1);
+    <span style="color:#66d9ef">let</span> semicolon <span style="color:#f92672">=</span> terminated(tag(<span style="color:#e6db74">&#34;;&#34;</span>), multispace0);
+
+    terminated(color_string, semicolon)(i)
+}
+</code></pre></div><p>Firstly, the input to the function is a string and the output is a type of
+<code>Result</code>. A Result type in Rust basically tells you - something can return a
+value or a failure state. And actually coming back to the Haskell snippets
+mentioned previously - <code>IResult&lt;&amp;str, &amp;str&gt;</code> is equivilent to <code>Either (String, String) Error</code>. The type signature out of the way, we move onto the actual body
+of the function.</p>
+<p>Lets first look at the <code>terminated</code> and <code>preceded</code> parser combinators. The ones
+we see here are very similar and are basically inverted versions of each other.
+The <code>preceded</code> combinator takes in two parsers and <span class="underline">combines</span> them into one
+parser where the the second parser is <strong>preceeded</strong> by the first one. Using this
+knowledge we can now see that <code>identifier</code> is a parser that will return 1 or
+more spaces only if they were preceeded by the word color.</p>
+<p>To clarify, this parser will return a parsed input of 1 or more spaces only if
+its preceeding parser <code>tag(&quot;color&quot;)</code> <strong><span class="underline">succeeds</span></strong>. Note that we're not really
+interested in parsing the spaces themselves and what we're really trying to do
+is to make a parser that fail when the pattern we are looking for isn't there
+and its results are irrelevant to us in this case. So if one of the parsers
+within the combinator fails, the whole combined parser fails.</p>
+<p>Moving onto the <code>color_string</code> parser we can see it is quite similar. However
+notice that now we are saying - get me a string of hexidecimal digits of length
+1 or more that are preceeded by the <code>identifier</code>. So this parser first looks for
+spaces preceeded by the word color and if that succeeds, it will look for the
+hex string for the color. In contrast to the previous parser where we really
+didn't care for the output of the parser (the 1 or more spaces), we actually
+want the color output from this parser if it succeeds. Finally the <code>semicolon</code>
+parser is a parser that takes the tag parser for the semicolon and then only
+returns a result if the <code>multispace0</code> finds 0 or more space-like string after
+the semicolon (hello optional newline!). Bus similarly to before, we aren't
+interested in the semicolon itself, we will use this parser succeeding as an
+indicator that something is followed by a semicolor and optional spaces.</p>
+<p>Lastly we move onto the last combinator. Here we use the <code>color_string</code> parser
+which will give us the string value of the color and say that it has to be
+followed by a successful parsing of the semicolor parser. Also not that we're
+finally passing the input string to this parser - <code>(i)</code> and returning the result
+(in Rust no colon in the last statement of a function returns that value).</p>
+<p>So in summary, we built a bunch of smaller parsers for which we mostly didn't
+care if they returned some parsed value and we just cared if they succeeded in
+matching bits of the string that they are designed to do. Then we build a
+parsers that actually got us what we wanted, namely the hex string and then we
+build a larger parser by combining these smaller bits.</p>
+<p>We could extract the constituent parsers into their own functions and reuse
+them! We can also test these smaller parsers individually to ensure quality.
+Furthermore there are tons of other useful combintors for example <code>many1</code> which
+basically takes a parser and keeps trying to reuse this parser until it fails
+and return the results in a vector. So if you had multiple commands in a new
+line and you wrote a generic command parser, you could use this many combinator
+to suddenly be able to parse <code>n</code> number of these commands. Ultimately the whole
+parser for my language and all of its bits and bobs turned out to look like
+this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#e6db74">/// Root parser for whole documents
+</span><span style="color:#e6db74"></span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">root</span>(i: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">IResult</span><span style="color:#f92672">&lt;</span><span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span>, Entities<span style="color:#f92672">&gt;</span> {
+    all_consuming(many0(terminated(
+        alt((trigger, sequence, action)),
+        many0(newline),
+    )))(i)
+}
+</code></pre></div><p>Lets briefly run through this! So firstly we have the <code>all_consuming</code> combinator
+which fails the whole parsing process if there are bits of the input left over
+that haven't been parsed (meaning we're missing the ability to parse something).</p>
+<p>Then we have have a <code>many0</code> (again very similar to like regex quantifiers) which
+looks for a <code>many0(newline)</code> terminated lines containing one of the following
+parsers (the <code>alt</code> parser is basically an <code>one of</code> across parsers):</p>
+<ul>
+<li><code>trigger</code> - the trigger statement parser</li>
+<li><code>sequence</code> - the parser to parse the sequence structure</li>
+<li><code>action</code> - a standalone assigned action</li>
+</ul>
+<p>So in the end it will return this <code>Entities</code> type, which I won't go into but it
+is a collection of outputs from this parser all stacked together in a vector.
+Which then my interpreter can deal with by looking at what each entity is
+(statement, sequence assignment, action assignment).</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>I wrote this blog in org-mode markdown and then there was some intermediary process that converted it to html. This is the type of stuff pandoc is really good at.</p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>I had written a simple API wrapper and CLI for Philips Hue lights that this scripting language uses. See more: <a href="https://github.com/finnkauski/lighthouse">https://github.com/finnkauski/lighthouse</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>For demonstration purposes I use haskell as its a very clean looking language to start with. Later I will move onto Rust, but the same concepts translate.</p>
+</li>
+</ol>
+</section>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
