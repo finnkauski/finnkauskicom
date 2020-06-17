@@ -3,7 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://finnkauski.com/categories/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/haskell/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/categories/haskell/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://finnkauski.com/posts/parser-combinators/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/parsing/</loc>
     <lastmod>2020-06-17T10:36:00+01:00</lastmod>
   </url>
   
@@ -13,22 +33,42 @@
   </url>
   
   <url>
+    <loc>https://finnkauski.com/tags/programming/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/projects/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/categories/projects/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/rust/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/categories/rust/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://finnkauski.com/tags/</loc>
+    <lastmod>2020-06-17T10:36:00+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://finnkauski.com/</loc>
     <lastmod>2020-06-17T10:36:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://finnkauski.com/categories/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://finnkauski.com/categories/opinion/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/programming/</loc>
     <lastmod>2020-01-08T15:24:00+00:00</lastmod>
   </url>
   
@@ -38,12 +78,12 @@
   </url>
   
   <url>
-    <loc>https://finnkauski.com/tags/python/</loc>
+    <loc>https://finnkauski.com/categories/python/</loc>
     <lastmod>2020-01-08T15:24:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://finnkauski.com/categories/python/</loc>
+    <loc>https://finnkauski.com/tags/python/</loc>
     <lastmod>2020-01-08T15:24:00+00:00</lastmod>
   </url>
   
@@ -58,22 +98,12 @@
   </url>
   
   <url>
-    <loc>https://finnkauski.com/tags/</loc>
-    <lastmod>2020-01-08T15:24:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://finnkauski.com/posts/drue/</loc>
     <lastmod>2019-12-27T20:59:38+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://finnkauski.com/tags/drums/</loc>
-    <lastmod>2019-12-27T20:59:38+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://finnkauski.com/tags/rust/</loc>
     <lastmod>2019-12-27T20:59:38+00:00</lastmod>
   </url>
   

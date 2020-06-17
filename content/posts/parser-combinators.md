@@ -1,7 +1,9 @@
 ---
-title: "Parser combinators :rust:haskell:programming:parsing:projects:@rust:@haskell:@projects"
+title: "Parser combinators"
 author: ["Art"]
 date: 2020-06-17T10:36:00+01:00
+tags: ["rust", "haskell", "programming", "parsing", "projects"]
+categories: ["rust", "haskell", "projects"]
 draft: false
 ---
 

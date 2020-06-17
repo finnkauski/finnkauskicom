@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rust on the.finest.art</title>
-    <link>https://finnkauski.com/tags/rust/</link>
-    <description>Recent content in rust on the.finest.art</description>
+    <title>haskell on the.finest.art</title>
+    <link>https://finnkauski.com/tags/haskell/</link>
+    <description>Recent content in haskell on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 10:36:00 +0100</lastBuildDate>
     
-	<atom:link href="https://finnkauski.com/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.com/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,17 +18,6 @@
       
       <guid>https://finnkauski.com/posts/parser-combinators/</guid>
       <description>Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it).</description>
-    </item>
-    
-    <item>
-      <title>Drue</title>
-      <link>https://finnkauski.com/posts/drue/</link>
-      <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
-      
-      <guid>https://finnkauski.com/posts/drue/</guid>
-      <description>drue This is a showcase of a bit of software I&#39;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
-I haven&#39;t opened the repository for the codebase yet. But if there is demand I will tidy it up and put it on github.
-Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&#39;ve implemented:</description>
     </item>
     
   </channel>

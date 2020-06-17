@@ -648,7 +648,7 @@ tags. The next step is then to edit them to fit our creative vision.
 
 There are several ways to do so and I will briefly fly through them from least
 convenient (except for small tweaks) to most convenient (for larger projects).
-** DONE Parser combinators :rust:haskell:programming:parsing:projects:@rust:@haskell:@projects
+** DONE Parser combinators :rust:haskell:programming:parsing:projects:@rust:@haskell:@projects:
 :PROPERTIES:
 :EXPORT_FILE_NAME: parser-combinators
 :EXPORT_DATE: [2020-06-17 Wed 10:36]
