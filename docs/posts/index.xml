@@ -12,22 +12,12 @@
     
     
     <item>
-      <title>Parser combinators</title>
+      <title>Parser combinators :rust:haskell:programming:parsing:projects:@rust:@haskell:@projects</title>
       <link>https://finnkauski.com/posts/parser-combinators/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
       <guid>https://finnkauski.com/posts/parser-combinators/</guid>
       <description>Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it).</description>
-    </item>
-    
-    <item>
-      <title>Journey through the web for Data Scientists</title>
-      <link>https://finnkauski.com/posts/journey-through-the-web-for-data-scientists/</link>
-      <pubDate>Wed, 12 Feb 2020 20:00:00 +0000</pubDate>
-      
-      <guid>https://finnkauski.com/posts/journey-through-the-web-for-data-scientists/</guid>
-      <description>Intro The tempo of these posts is going to escalate as I expect people to keep reading more about the subject if they want to. This is mainly to keep me motivated to write the content and for us to finish going through the good bits in good time.
-This post will kick us off into this adventure by introducing the concepts of HTML and CSS in as much depth as you need to know to follow along.</description>
     </item>
     
     <item>
