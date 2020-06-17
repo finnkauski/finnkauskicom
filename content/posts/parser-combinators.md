@@ -56,7 +56,7 @@ followed along with that helped me:
 Firstly, let's cover what a parser is. In simple words, parser is:
 
 1.  A callable object (usually a function)
-2.  The types signature of which would be something along the lines o[^fn:3]f
+2.  The types signature of which would be something along the lines of[^fn:3]
 
     ```haskell
        parser :: String -> Either SomeStructure ParsingError
