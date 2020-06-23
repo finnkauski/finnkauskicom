@@ -878,7 +878,7 @@ that haven't been parsed (meaning we're missing the ability to parse something).
 
 Then we have have a =many0= (again very similar to like regex quantifiers) which
 looks for a =many0(newline)= terminated lines containing one of the following
-parsers (the =alt= parser is basically an =one of= across parsers):
+parsers (the =alt= parser is basically a =one of= across parsers):
 - =trigger= - the trigger statement parser
 - =sequence= - the parser to parse the sequence structure
 - =action= - a standalone assigned action
@@ -891,7 +891,7 @@ Which then my interpreter can deal with by looking at what each entity is
 *** Conclusion
 
 Hopefully my write up of this inspires the more curious people to try this out
-for themselves. In general writting a scripting language like this was quite a
+for themselves. In general writing a scripting language like this was quite a
 fun experience. Ultimately I think what I enjoyed from this project is the
 process of being aware of a technology and then finding a good use case to
 practice this tech in some form of fun but educational project.
