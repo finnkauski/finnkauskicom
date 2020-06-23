@@ -2,147 +2,147 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on the.finest.art</title>
-    <link>https://definest.art/tags/</link>
+    <link>https://finnkauski.com/tags/</link>
     <description>Recent content in Tags on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 10:36:00 +0100</lastBuildDate>
     
-	<atom:link href="https://definest.art/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>haskell</title>
-      <link>https://definest.art/tags/haskell/</link>
+      <link>https://finnkauski.com/tags/haskell/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/tags/haskell/</guid>
+      <guid>https://finnkauski.com/tags/haskell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>parsing</title>
-      <link>https://definest.art/tags/parsing/</link>
+      <link>https://finnkauski.com/tags/parsing/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/tags/parsing/</guid>
+      <guid>https://finnkauski.com/tags/parsing/</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>https://definest.art/tags/programming/</link>
+      <link>https://finnkauski.com/tags/programming/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/tags/programming/</guid>
+      <guid>https://finnkauski.com/tags/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>https://definest.art/tags/projects/</link>
+      <link>https://finnkauski.com/tags/projects/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/tags/projects/</guid>
+      <guid>https://finnkauski.com/tags/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rust</title>
-      <link>https://definest.art/tags/rust/</link>
+      <link>https://finnkauski.com/tags/rust/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/tags/rust/</guid>
+      <guid>https://finnkauski.com/tags/rust/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://definest.art/tags/python/</link>
+      <link>https://finnkauski.com/tags/python/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/python/</guid>
+      <guid>https://finnkauski.com/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
       <title>standards</title>
-      <link>https://definest.art/tags/standards/</link>
+      <link>https://finnkauski.com/tags/standards/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/standards/</guid>
+      <guid>https://finnkauski.com/tags/standards/</guid>
       <description></description>
     </item>
     
     <item>
       <title>drums</title>
-      <link>https://definest.art/tags/drums/</link>
+      <link>https://finnkauski.com/tags/drums/</link>
       <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
       
-      <guid>https://definest.art/tags/drums/</guid>
+      <guid>https://finnkauski.com/tags/drums/</guid>
       <description></description>
     </item>
     
     <item>
       <title>coding</title>
-      <link>https://definest.art/tags/coding/</link>
+      <link>https://finnkauski.com/tags/coding/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/coding/</guid>
+      <guid>https://finnkauski.com/tags/coding/</guid>
       <description></description>
     </item>
     
     <item>
       <title>streaming</title>
-      <link>https://definest.art/tags/streaming/</link>
+      <link>https://finnkauski.com/tags/streaming/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/streaming/</guid>
+      <guid>https://finnkauski.com/tags/streaming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>twitch</title>
-      <link>https://definest.art/tags/twitch/</link>
+      <link>https://finnkauski.com/tags/twitch/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/twitch/</guid>
+      <guid>https://finnkauski.com/tags/twitch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>general</title>
-      <link>https://definest.art/tags/general/</link>
+      <link>https://finnkauski.com/tags/general/</link>
       <pubDate>Sun, 08 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/general/</guid>
+      <guid>https://finnkauski.com/tags/general/</guid>
       <description></description>
     </item>
     
     <item>
       <title>pipenv</title>
-      <link>https://definest.art/tags/pipenv/</link>
+      <link>https://finnkauski.com/tags/pipenv/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/pipenv/</guid>
+      <guid>https://finnkauski.com/tags/pipenv/</guid>
       <description></description>
     </item>
     
     <item>
       <title>functional</title>
-      <link>https://definest.art/tags/functional/</link>
+      <link>https://finnkauski.com/tags/functional/</link>
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/functional/</guid>
+      <guid>https://finnkauski.com/tags/functional/</guid>
       <description></description>
     </item>
     
     <item>
       <title>porridge</title>
-      <link>https://definest.art/tags/porridge/</link>
+      <link>https://finnkauski.com/tags/porridge/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/tags/porridge/</guid>
+      <guid>https://finnkauski.com/tags/porridge/</guid>
       <description></description>
     </item>
     

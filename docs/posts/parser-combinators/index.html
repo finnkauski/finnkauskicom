@@ -3,11 +3,11 @@
   <head>
     <title>Parser combinators // the.finest.art</title>
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.60.0" />
+    <meta name="generator" content="Hugo 0.64.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Art Eidukas" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://definest.art/css/main.min.66e0b38fe9ce7409c95342b51834429f06105abf6e01af2d5b3a6bac8d6cd6c6.css" />
+    <link rel="stylesheet" href="https://finnkauski.com/css/main.min.66e0b38fe9ce7409c95342b51834429f06105abf6e01af2d5b3a6bac8d6cd6c6.css" />
 
     
 <script type="application/javascript">
@@ -30,7 +30,7 @@ if (!doNotTrack) {
     <meta property="og:title" content="Parser combinators" />
 <meta property="og:description" content="Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it)." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://definest.art/posts/parser-combinators/" />
+<meta property="og:url" content="https://finnkauski.com/posts/parser-combinators/" />
 <meta property="article:published_time" content="2020-06-17T10:36:00+01:00" />
 <meta property="article:modified_time" content="2020-06-17T10:36:00+01:00" /><meta property="og:site_name" content="the.finest.art" />
 
@@ -38,7 +38,7 @@ if (!doNotTrack) {
   </head>
   <body>
     <header class="app-header">
-      <a href="https://definest.art"><img class="app-header-avatar" src="https://i.imgur.com/7CJuxBB.jpg" alt="Art Eidukas" /></a>
+      <a href="https://finnkauski.com"><img class="app-header-avatar" src="https://i.imgur.com/udYAc6d.jpg" alt="Art Eidukas" /></a>
       <h1>the.finest.art</h1>
       <p>Just making stuff and sharing what I learn.</p>
       <div class="app-header-social">
@@ -79,7 +79,7 @@ if (!doNotTrack) {
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
 </svg>
-          <a class="tag" href="https://definest.art/tags/rust/">rust</a><a class="tag" href="https://definest.art/tags/haskell/">haskell</a><a class="tag" href="https://definest.art/tags/programming/">programming</a><a class="tag" href="https://definest.art/tags/parsing/">parsing</a><a class="tag" href="https://definest.art/tags/projects/">projects</a></div></div>
+          <a class="tag" href="https://finnkauski.com/tags/rust/">rust</a><a class="tag" href="https://finnkauski.com/tags/haskell/">haskell</a><a class="tag" href="https://finnkauski.com/tags/programming/">programming</a><a class="tag" href="https://finnkauski.com/tags/parsing/">parsing</a><a class="tag" href="https://finnkauski.com/tags/projects/">projects</a></div></div>
     </header>
     <div class="post-content">
       <h2 id="introduction">Introduction</h2>
@@ -101,16 +101,16 @@ allowing you to convert files from one markup to another with ease<sup id="fnref
 <p>Pandoc (as far as I understand) uses <span class="underline">parser combinators</span> to parse different
 formats and convert them between each other. I saw this concept of parser
 combinators also pop up in the <a href="https://haskellbook.com/">haskell book</a> that I used to teach myself the
-language. Lastly, it popped up as a video a while back in <a href="https://www.youtube.com/watch?v=N9RUqGYuGfw">Tsoding's video on
+language. Lastly, it popped up as a video a while back in <a href="https://www.youtube.com/watch?v=N9RUqGYuGfw">Tsoding&rsquo;s video on
 writing a JSON parser in 111 lines of haskell code</a>.</p>
 <p>I finally caved and decided to write a simple scripting language (if you can
 call it that) for scripting my lights<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Check it out <a href="https://github.com/finnkauski/lightshow">here</a>.</p>
-<p>Note that I will introduce the concepts, but I don't think I can teach and
-provide in depth explanations for them. Mainly because I don't know them well
+<p>Note that I will introduce the concepts, but I don&rsquo;t think I can teach and
+provide in depth explanations for them. Mainly because I don&rsquo;t know them well
 enough to do it justice. And also do keep in mind that there is probably a
 parser combinator library in most languages (and if not, go write it) and you
 will have to find that library yourself.</p>
-<p>We won't be implementing parsers from scratch, if you are curious and want to
+<p>We won&rsquo;t be implementing parsers from scratch, if you are curious and want to
 have a bash in implementing this from scratch, here are the 2 resources that I
 followed along with that helped me:</p>
 <ol>
@@ -118,7 +118,7 @@ followed along with that helped me:</p>
 <li><a href="https://www.youtube.com/watch?v=N9RUqGYuGfw">Tsodings JSON parser from scratch in 111 lines</a></li>
 </ol>
 <h2 id="parsers">Parsers</h2>
-<p>Firstly, let's cover what a parser is. In simple words, parser is:</p>
+<p>Firstly, let&rsquo;s cover what a parser is. In simple words, parser is:</p>
 <ol>
 <li>
 <p>A callable object (usually a function)</p>
@@ -132,7 +132,7 @@ build from that text or an error if it fails to parse it.</p>
 </li>
 </ol>
 <p>So the key concept here is that a parser can <strong>fail</strong> or it can return a parsed
-object that you are after alongside whatever else it didn't parse.
+object that you are after alongside whatever else it didn&rsquo;t parse.
 To clarify that last bit, often parsers return not only the structure that they
 parse, but also the rest of the input that was left after they extracted that
 structure.</p>
@@ -194,7 +194,7 @@ parser combinators.</p>
 parsers already implemented. The <code>tag</code> parser can be used to parse the word
 &lsquo;color&rsquo;, the <code>hex_digit1</code> parser will help us deal with a string of hex values
 for our color string, <code>space1</code> will help us parse 1 or more spaces and finally
-we'll use <code>tag</code> again to deal with the colon. We will skip the newline for now.</p>
+we&rsquo;ll use <code>tag</code> again to deal with the colon. We will skip the newline for now.</p>
 <p>Lets look at how the simplified parser implementation for color looks like and
 decompose it into both the parsers we described above and the combinators we use.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">color</span>(i: <span style="color:#66d9ef">&amp;</span><span style="color:#66d9ef">str</span>) -&gt; <span style="color:#a6e22e">IResult</span><span style="color:#f92672">&lt;</span><span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span>, <span style="color:#f92672">&amp;</span><span style="color:#66d9ef">str</span><span style="color:#f92672">&gt;</span> {
@@ -216,9 +216,9 @@ parser where the the second parser is <strong>preceeded</strong> by the first on
 knowledge we can now see that <code>identifier</code> is a parser that will return 1 or
 more spaces only if they were preceeded by the word color.</p>
 <p>To clarify, this parser will return a parsed input of 1 or more spaces only if
-its preceeding parser <code>tag(&quot;color&quot;)</code> <strong><span class="underline">succeeds</span></strong>. Note that we're not really
-interested in parsing the spaces themselves and what we're really trying to do
-is to make a parser that fail when the pattern we are looking for isn't there
+its preceeding parser <code>tag(&quot;color&quot;)</code> <strong><span class="underline">succeeds</span></strong>. Note that we&rsquo;re not really
+interested in parsing the spaces themselves and what we&rsquo;re really trying to do
+is to make a parser that fail when the pattern we are looking for isn&rsquo;t there
 and its results are irrelevant to us in this case. So if one of the parsers
 within the combinator fails, the whole combined parser fails.</p>
 <p>Moving onto the <code>color_string</code> parser we can see it is quite similar. However
@@ -226,19 +226,19 @@ notice that now we are saying - get me a string of hexidecimal digits of length
 1 or more that are preceeded by the <code>identifier</code>. So this parser first looks for
 spaces preceeded by the word color and if that succeeds, it will look for the
 hex string for the color. In contrast to the previous parser where we really
-didn't care for the output of the parser (the 1 or more spaces), we actually
+didn&rsquo;t care for the output of the parser (the 1 or more spaces), we actually
 want the color output from this parser if it succeeds. Finally the <code>semicolon</code>
 parser is a parser that takes the tag parser for the semicolon and then only
 returns a result if the <code>multispace0</code> finds 0 or more space-like string after
-the semicolon (hello optional newline!). Bus similarly to before, we aren't
+the semicolon (hello optional newline!). Bus similarly to before, we aren&rsquo;t
 interested in the semicolon itself, we will use this parser succeeding as an
 indicator that something is followed by a semicolor and optional spaces.</p>
 <p>Lastly we move onto the last combinator. Here we use the <code>color_string</code> parser
 which will give us the string value of the color and say that it has to be
-followed by a successful parsing of the semicolor parser. Also not that we're
+followed by a successful parsing of the semicolor parser. Also not that we&rsquo;re
 finally passing the input string to this parser - <code>(i)</code> and returning the result
 (in Rust no colon in the last statement of a function returns that value).</p>
-<p>So in summary, we built a bunch of smaller parsers for which we mostly didn't
+<p>So in summary, we built a bunch of smaller parsers for which we mostly didn&rsquo;t
 care if they returned some parsed value and we just cared if they succeeded in
 matching bits of the string that they are designed to do. Then we build a
 parsers that actually got us what we wanted, namely the hex string and then we
@@ -261,7 +261,7 @@ this:</p>
 }
 </code></pre></div><p>Lets briefly run through this! So firstly we have the <code>all_consuming</code> combinator
 which fails the whole parsing process if there are bits of the input left over
-that haven't been parsed (meaning we're missing the ability to parse something).</p>
+that haven&rsquo;t been parsed (meaning we&rsquo;re missing the ability to parse something).</p>
 <p>Then we have have a <code>many0</code> (again very similar to like regex quantifiers) which
 looks for a <code>many0(newline)</code> terminated lines containing one of the following
 parsers (the <code>alt</code> parser is basically an <code>one of</code> across parsers):</p>
@@ -270,7 +270,7 @@ parsers (the <code>alt</code> parser is basically an <code>one of</code> across 
 <li><code>sequence</code> - the parser to parse the sequence structure</li>
 <li><code>action</code> - a standalone assigned action</li>
 </ul>
-<p>So in the end it will return this <code>Entities</code> type, which I won't go into but it
+<p>So in the end it will return this <code>Entities</code> type, which I won&rsquo;t go into but it
 is a collection of outputs from this parser all stacked together in a vector.
 Which then my interpreter can deal with by looking at what each entity is
 (statement, sequence assignment, action assignment).</p>
@@ -284,13 +284,13 @@ practice this tech in some form of fun but educational project.</p>
 <hr>
 <ol>
 <li id="fn:1" role="doc-endnote">
-<p>I wrote this blog in org-mode markdown and then there was some intermediary process that converted it to html. This is the type of stuff pandoc is really good at.</p>
+<p>I wrote this blog in org-mode markdown and then there was some intermediary process that converted it to html. This is the type of stuff pandoc is really good at. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>I had written a simple API wrapper and CLI for Philips Hue lights that this scripting language uses. See more: <a href="https://github.com/finnkauski/lighthouse">https://github.com/finnkauski/lighthouse</a></p>
+<p>I had written a simple API wrapper and CLI for Philips Hue lights that this scripting language uses. See more: <a href="https://github.com/finnkauski/lighthouse">https://github.com/finnkauski/lighthouse</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>For demonstration purposes I use haskell as its a very clean looking language to start with. Later I will move onto Rust, but the same concepts translate.</p>
+<p>For demonstration purposes I use haskell as its a very clean looking language to start with. Later I will move onto Rust, but the same concepts translate. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
 </section>

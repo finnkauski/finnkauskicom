@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on the.finest.art</title>
-    <link>https://definest.art/categories/</link>
+    <link>https://finnkauski.com/categories/</link>
     <description>Recent content in Categories on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 10:36:00 +0100</lastBuildDate>
     
-	<atom:link href="https://definest.art/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>haskell</title>
-      <link>https://definest.art/categories/haskell/</link>
+      <link>https://finnkauski.com/categories/haskell/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/categories/haskell/</guid>
+      <guid>https://finnkauski.com/categories/haskell/</guid>
       <description></description>
     </item>
     
     <item>
       <title>projects</title>
-      <link>https://definest.art/categories/projects/</link>
+      <link>https://finnkauski.com/categories/projects/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/categories/projects/</guid>
+      <guid>https://finnkauski.com/categories/projects/</guid>
       <description></description>
     </item>
     
     <item>
       <title>rust</title>
-      <link>https://definest.art/categories/rust/</link>
+      <link>https://finnkauski.com/categories/rust/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/categories/rust/</guid>
+      <guid>https://finnkauski.com/categories/rust/</guid>
       <description></description>
     </item>
     
     <item>
       <title>opinion</title>
-      <link>https://definest.art/categories/opinion/</link>
+      <link>https://finnkauski.com/categories/opinion/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/categories/opinion/</guid>
+      <guid>https://finnkauski.com/categories/opinion/</guid>
       <description></description>
     </item>
     
     <item>
       <title>programming</title>
-      <link>https://definest.art/categories/programming/</link>
+      <link>https://finnkauski.com/categories/programming/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/categories/programming/</guid>
+      <guid>https://finnkauski.com/categories/programming/</guid>
       <description></description>
     </item>
     
     <item>
       <title>python</title>
-      <link>https://definest.art/categories/python/</link>
+      <link>https://finnkauski.com/categories/python/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/categories/python/</guid>
+      <guid>https://finnkauski.com/categories/python/</guid>
       <description></description>
     </item>
     

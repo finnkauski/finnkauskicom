@@ -1,4 +1,4 @@
-baseurl = "https://definest.art"
+baseurl = "https://finnkauski.com"
 languageCode = "en-us"
 theme = "m10c"
 paginate = 5
@@ -22,7 +22,7 @@ googleAnalytics = "UA-150010764-1"
 
 [params]
   author = "Art Eidukas"
-  avatar = "https://i.imgur.com/7CJuxBB.jpg"
+  avatar = "https://i.imgur.com/udYAc6d.jpg"
 
 [[params.social]]
   name = "github"
@@ -33,11 +33,11 @@ googleAnalytics = "UA-150010764-1"
   url = "https://keybase.io/finnkauski"
 
 [params.style]
-  darkestColor = "black"
-  darkColor = "#1B1D1E"
-  lightColor = "white"
-  lightestColor = "white"
-  primaryColor = "#FF5733"
+  darkestColor = "#d35050"
+  darkColor = "#212121"
+  primaryColor = "#ffffff"
+  lightColor = "#a2a2a2"
+  lightestColor = "#d3d3d3"
 
 [languages]
   [languages.en]

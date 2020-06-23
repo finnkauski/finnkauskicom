@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming on the.finest.art</title>
-    <link>https://definest.art/tags/programming/</link>
+    <link>https://finnkauski.com/tags/programming/</link>
     <description>Recent content in programming on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 17 Jun 2020 10:36:00 +0100</lastBuildDate>
     
-	<atom:link href="https://definest.art/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Parser combinators</title>
-      <link>https://definest.art/posts/parser-combinators/</link>
+      <link>https://finnkauski.com/posts/parser-combinators/</link>
       <pubDate>Wed, 17 Jun 2020 10:36:00 +0100</pubDate>
       
-      <guid>https://definest.art/posts/parser-combinators/</guid>
+      <guid>https://finnkauski.com/posts/parser-combinators/</guid>
       <description>Introduction These are truly weird times. Those who are fortunate enough to have spare time and not be troubled by the horrors and consequences of the pandemic are be finding themselves spending a lot more time at home trying to occupy themselves. What really resonated with me is this great video by CGP Grey which reminded me that we need to get out of this situation better than we went in (if personal circumstances allow it).</description>
     </item>
     
     <item>
       <title>Ramblings on style and pythonisms</title>
-      <link>https://definest.art/posts/ramblings_on_style_and_pythonisms/</link>
+      <link>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/ramblings_on_style_and_pythonisms/</guid>
+      <guid>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</guid>
       <description>Motivation  If you get yourself into PEP8ing mode, what do you tend to see? You tend to see the PEP8 stuff and not what really matters.
 &amp;ndash; Raymond Hettinger, 2015
- Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&#39;ve seen numerous codebases written by people of varying ability and experience.</description>
+ Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&amp;rsquo;ve seen numerous codebases written by people of varying ability and experience.</description>
     </item>
     
     <item>
       <title>Drue</title>
-      <link>https://definest.art/posts/drue/</link>
+      <link>https://finnkauski.com/posts/drue/</link>
       <pubDate>Fri, 27 Dec 2019 20:59:38 +0000</pubDate>
       
-      <guid>https://definest.art/posts/drue/</guid>
-      <description>drue This is a showcase of a bit of software I&#39;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
-I haven&#39;t opened the repository for the codebase yet. But if there is demand I will tidy it up and put it on github.
-Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&#39;ve implemented:</description>
+      <guid>https://finnkauski.com/posts/drue/</guid>
+      <description>drue This is a showcase of a bit of software I&amp;rsquo;ve been writing. I am a newbie drummer and wanted to spice up some practice with a light show so this links the lights in my room (Philips HUE bulbs) with my drumkit.
+I haven&amp;rsquo;t opened the repository for the codebase yet. But if there is demand I will tidy it up and put it on github.
+Demo:   A few things to note I only show you 2 &amp;lsquo;modes&amp;rsquo; that I&amp;rsquo;ve implemented:</description>
     </item>
     
     <item>
       <title>Streaming</title>
-      <link>https://definest.art/posts/streaming/</link>
+      <link>https://finnkauski.com/posts/streaming/</link>
       <pubDate>Mon, 16 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/streaming/</guid>
+      <guid>https://finnkauski.com/posts/streaming/</guid>
       <description>Hey folks! I recently got the urge to stream myself coding and programming. I am a keen learner and recently have been learning more and more Rust as a language for my hobbies and as an opportunity to develop.
 Click here to see my twitch profile and read on for the content that is coming up in the near future.
 Upcoming content The short term project I will be working towards is creating an app that connects my midi drums to my hue lights!</description>
@@ -55,10 +55,10 @@ Upcoming content The short term project I will be working towards is creating an
     
     <item>
       <title>Python climate change</title>
-      <link>https://definest.art/posts/python-climate-change/</link>
+      <link>https://finnkauski.com/posts/python-climate-change/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/python-climate-change/</guid>
+      <guid>https://finnkauski.com/posts/python-climate-change/</guid>
       <description>The Setup First of climate change is an insanely scary issue for everyone and should not be neglected! However, I want to talk about a different environment, a python environment.
 I recently got asked to talk about my environment management when I work in python. However if that person had read my first post on this page they would have noticed:
  &amp;ldquo;Pipenv: The Future of Python Dependency Management&amp;rdquo; - A splendid talk about how not to have a breakdown trying to run your python code on other peoples computers (aka sharing projects and proper dependency management)</description>
@@ -66,23 +66,23 @@ I recently got asked to talk about my environment management when I work in pyth
     
     <item>
       <title>Arts adventures in functionland</title>
-      <link>https://definest.art/posts/adventures-in-functionland/</link>
+      <link>https://finnkauski.com/posts/adventures-in-functionland/</link>
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/adventures-in-functionland/</guid>
+      <guid>https://finnkauski.com/posts/adventures-in-functionland/</guid>
       <description>MathJax.Hub.Config({ tex2jax: { inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; }, extensions: [&#34;AMSmath.js&#34;, &#34;AMSsymbols.js&#34;] } } });  Oh boy, where do we even start.
 My colleague, an ardent mathematician, kept telling me about functional programming for what basically is my whole programming life. I come from an economist background so for me the terms Object-Oriented and functional did not mean much.</description>
     </item>
     
     <item>
       <title>Python - Knowledge is porridge!</title>
-      <link>https://definest.art/posts/knowledge-is-porridge/</link>
+      <link>https://finnkauski.com/posts/knowledge-is-porridge/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/knowledge-is-porridge/</guid>
-      <description>Intro Today I&#39;ll focus on python.
+      <guid>https://finnkauski.com/posts/knowledge-is-porridge/</guid>
+      <description>Intro Today I&amp;rsquo;ll focus on python.
 As I am sure you will know that python is a general purpose programming language which is a commonly used tool to build data science pipelines, models etc.
-The following will be a few resources to watch and read that I believe to be worth your time. And below that you&#39;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
+The following will be a few resources to watch and read that I believe to be worth your time. And below that you&amp;rsquo;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
     </item>
     
   </channel>

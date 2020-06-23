@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on the.finest.art</title>
-    <link>https://definest.art/tags/python/</link>
+    <link>https://finnkauski.com/tags/python/</link>
     <description>Recent content in python on the.finest.art</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 08 Jan 2020 15:24:00 +0000</lastBuildDate>
     
-	<atom:link href="https://definest.art/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://finnkauski.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ramblings on style and pythonisms</title>
-      <link>https://definest.art/posts/ramblings_on_style_and_pythonisms/</link>
+      <link>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</link>
       <pubDate>Wed, 08 Jan 2020 15:24:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/ramblings_on_style_and_pythonisms/</guid>
+      <guid>https://finnkauski.com/posts/ramblings_on_style_and_pythonisms/</guid>
       <description>Motivation  If you get yourself into PEP8ing mode, what do you tend to see? You tend to see the PEP8 stuff and not what really matters.
 &amp;ndash; Raymond Hettinger, 2015
- Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&#39;ve seen numerous codebases written by people of varying ability and experience.</description>
+ Firstly, I am by no means a python expert, but I have been using python since September 2015 (almost 4 years at the time of writing). In that time I&amp;rsquo;ve seen numerous codebases written by people of varying ability and experience.</description>
     </item>
     
     <item>
       <title>Python climate change</title>
-      <link>https://definest.art/posts/python-climate-change/</link>
+      <link>https://finnkauski.com/posts/python-climate-change/</link>
       <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/python-climate-change/</guid>
+      <guid>https://finnkauski.com/posts/python-climate-change/</guid>
       <description>The Setup First of climate change is an insanely scary issue for everyone and should not be neglected! However, I want to talk about a different environment, a python environment.
 I recently got asked to talk about my environment management when I work in python. However if that person had read my first post on this page they would have noticed:
  &amp;ldquo;Pipenv: The Future of Python Dependency Management&amp;rdquo; - A splendid talk about how not to have a breakdown trying to run your python code on other peoples computers (aka sharing projects and proper dependency management)</description>
@@ -35,23 +35,23 @@ I recently got asked to talk about my environment management when I work in pyth
     
     <item>
       <title>Arts adventures in functionland</title>
-      <link>https://definest.art/posts/adventures-in-functionland/</link>
+      <link>https://finnkauski.com/posts/adventures-in-functionland/</link>
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/adventures-in-functionland/</guid>
+      <guid>https://finnkauski.com/posts/adventures-in-functionland/</guid>
       <description>MathJax.Hub.Config({ tex2jax: { inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]], displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\[&#39;,&#39;\]&#39;]], processEscapes: true, processEnvironments: true, skipTags: [&#39;script&#39;, &#39;noscript&#39;, &#39;style&#39;, &#39;textarea&#39;, &#39;pre&#39;], TeX: { equationNumbers: { autoNumber: &#34;AMS&#34; }, extensions: [&#34;AMSmath.js&#34;, &#34;AMSsymbols.js&#34;] } } });  Oh boy, where do we even start.
 My colleague, an ardent mathematician, kept telling me about functional programming for what basically is my whole programming life. I come from an economist background so for me the terms Object-Oriented and functional did not mean much.</description>
     </item>
     
     <item>
       <title>Python - Knowledge is porridge!</title>
-      <link>https://definest.art/posts/knowledge-is-porridge/</link>
+      <link>https://finnkauski.com/posts/knowledge-is-porridge/</link>
       <pubDate>Tue, 15 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://definest.art/posts/knowledge-is-porridge/</guid>
-      <description>Intro Today I&#39;ll focus on python.
+      <guid>https://finnkauski.com/posts/knowledge-is-porridge/</guid>
+      <description>Intro Today I&amp;rsquo;ll focus on python.
 As I am sure you will know that python is a general purpose programming language which is a commonly used tool to build data science pipelines, models etc.
-The following will be a few resources to watch and read that I believe to be worth your time. And below that you&#39;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
+The following will be a few resources to watch and read that I believe to be worth your time. And below that you&amp;rsquo;ll a personality spotlight with a few good names in the python community that I would like to highlight.</description>
     </item>
     
   </channel>
