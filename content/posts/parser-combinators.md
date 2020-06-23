@@ -194,7 +194,7 @@ indicator that something is followed by a semicolor and optional spaces.
 
 Lastly we move onto the last combinator. Here we use the `color_string` parser
 which will give us the string value of the color and say that it has to be
-followed by a successful parsing of the semicolor parser. Also not that we're
+followed by a successful parsing of the semicolor parser. Also note that we're
 finally passing the input string to this parser - `(i)` and returning the result
 (in Rust no colon in the last statement of a function returns that value).
 

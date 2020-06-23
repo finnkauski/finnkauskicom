@@ -235,7 +235,7 @@ interested in the semicolon itself, we will use this parser succeeding as an
 indicator that something is followed by a semicolor and optional spaces.</p>
 <p>Lastly we move onto the last combinator. Here we use the <code>color_string</code> parser
 which will give us the string value of the color and say that it has to be
-followed by a successful parsing of the semicolor parser. Also not that we&rsquo;re
+followed by a successful parsing of the semicolor parser. Also note that we&rsquo;re
 finally passing the input string to this parser - <code>(i)</code> and returning the result
 (in Rust no colon in the last statement of a function returns that value).</p>
 <p>So in summary, we built a bunch of smaller parsers for which we mostly didn&rsquo;t
