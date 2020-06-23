@@ -208,8 +208,8 @@ We could extract the constituent parsers into their own functions and reuse
 them! We can also test these smaller parsers individually to ensure quality.
 Furthermore there are tons of other useful combintors for example `many1` which
 basically takes a parser and keeps trying to reuse this parser until it fails
-and return the results in a vector. So if you had multiple commands in a new
-line and you wrote a generic command parser, you could use this many combinator
+and return the results in a vector. So if you had multiple commands followed by a
+newline and you wrote a generic command parser, you could use this many combinator
 to suddenly be able to parse `n` number of these commands. Ultimately the whole
 parser for my language and all of its bits and bobs turned out to look like
 this:
