@@ -188,7 +188,7 @@ didn't care for the output of the parser (the 1 or more spaces), we actually
 want the color output from this parser if it succeeds. Finally the `semicolon`
 parser is a parser that takes the tag parser for the semicolon and then only
 returns a result if the `multispace0` finds 0 or more space-like string after
-the semicolon (hello optional newline!). Bus similarly to before, we aren't
+the semicolon (hello optional newline!). But similarly to before, we aren't
 interested in the semicolon itself, we will use this parser succeeding as an
 indicator that something is followed by a semicolor and optional spaces.
 

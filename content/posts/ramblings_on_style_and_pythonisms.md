@@ -116,148 +116,153 @@ might be preferred.
 
 ### Code Layout {#code-layout}
 
+<!--list-separator-->
+
 - Indentation
 
+  > _Use 4 spaces for indentation._
 
-    > _Use 4 spaces for indentation._
+  I firmly believe that using 4 spaced indents for your python code has a
+  significant impact on the readability of the code. Imagine having a piece of
+  code aligned as follows:
 
-    I firmly believe that using 4 spaced indents for your python code has a
-    significant impact on the readability of the code. Imagine having a piece of
-    code aligned as follows:
+  ```python
+  def function(parameter):
 
-    ```python
-    def function(parameter):
+    result = 0
+    for i in parameter:
+      if i > 10:
+        result+=i
+      else:
+        continue
+
+    return result
+  ```
+
+  I don't know about you, but to me this seems a bit cramped. Refactoring your
+  code as follows adds a bit more space and lets the eye clearly align and
+  distinguish what level each line is at. And yes, I know you can get indentation
+  guides in your fancy editor, but that won't be there for you when u want to
+  quickly open this in Notepad or view it on GitHub.
+
+  ```python
+  def function(parameter):
 
       result = 0
       for i in parameter:
-        if i > 10:
-          result+=i
-        else:
-          continue
+          if i > 10:
+              result+=i
+          else:
+              continue
 
       return result
-    ```
+  ```
 
-    I don't know about you, but to me this seems a bit cramped. Refactoring your
-    code as follows adds a bit more space and lets the eye clearly align and
-    distinguish what level each line is at. And yes, I know you can get indentation
-    guides in your fancy editor, but that won't be there for you when u want to
-    quickly open this in Notepad or view it on GitHub.
+  Note that things like the `if statement` and the code for each outcome is quite
+  clearly indented and at least to my eye is easier to split out!
 
-    ```python
-    def function(parameter):
+  The Indentation chapter of **PEP8** covers some more interesting choices for
+  indenting function parameters etc. If you are interested, you can read more
+  about it [here](https://www.python.org/dev/peps/pep-0008/#code-lay-out).
 
-        result = 0
-        for i in parameter:
-            if i > 10:
-                result+=i
-            else:
-                continue
-
-        return result
-    ```
-
-    Note that things like the `if statement` and the code for each outcome is quite
-    clearly indented and at least to my eye is easier to split out!
-
-    The Indentation chapter of **PEP8** covers some more interesting choices for
-    indenting function parameters etc. If you are interested, you can read more
-    about it [here](https://www.python.org/dev/peps/pep-0008/#code-lay-out).
+<!--list-separator-->
 
 - Tabs or Spaces?
 
+  > _Spaces_
 
-    > _Spaces_
+  I think as tedious as it sounds, you should use spaces (ideally 4) for
+  indentation. I think to make it simpler, a lot of modern text editors that are
+  used in coding as well as full blown [IDE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwi1keyUr-niAhX%5FQxUIHR41DhUQFjACegQIEhAG&url=https%253A%252F%252Fen.wikipedia.org%252Fwiki%252FIntegrated%5Fdevelopment%5Fenvironment&usg=AOvVaw26G%5FhSQrwphgc0qRbOs%5FUr)'s will convert tabs into spaces for you
+  if you ask them to (if not by default).
 
-    I think as tedious as it sounds, you should use spaces (ideally 4) for
-    indentation. I think to make it simpler, a lot of modern text editors that are
-    used in coding as well as full blown [IDE](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=2ahUKEwi1keyUr-niAhX%5FQxUIHR41DhUQFjACegQIEhAG&url=https%253A%252F%252Fen.wikipedia.org%252Fwiki%252FIntegrated%5Fdevelopment%5Fenvironment&usg=AOvVaw26G%5FhSQrwphgc0qRbOs%5FUr)'s will convert tabs into spaces for you
-    if you ask them to (if not by default).
+  The issue is that if you mix tabs and spaces (which might look the same to you,
+  but aren't really the same thing to python), you might get a **TabError** and that's
+  not something that you really want slowing you down when it is so easily avoidable.
 
-    The issue is that if you mix tabs and spaces (which might look the same to you,
-    but aren't really the same thing to python), you might get a **TabError** and that's
-    not something that you really want slowing you down when it is so easily avoidable.
+<!--list-separator-->
 
 - Maximum Line Length
 
+  > _PEP8 says 79. I say 90-ish_[^fn:1]
 
-    > _PEP8 says 79. I say 90-ish_[^fn:1]
+  Hettinger raises a great point (which admittedly is reflected in PEP8 once you
+  read it more carefully) that militantly observing 79 character guidelines is
+  sometimes isn't very sensible.
 
-    Hettinger raises a great point (which admittedly is reflected in PEP8 once you
-    read it more carefully) that militantly observing 79 character guidelines is
-    sometimes isn't very sensible.
+  **Indentation in python is important**. So lets say we have a bit of code with a
+  function and a few nested structures within the code. Something along the lines
+  of:
 
-    **Indentation in python is important**. So lets say we have a bit of code with a
-    function and a few nested structures within the code. Something along the lines
-    of:
+  ```python
+  def useful_function_name(list_of_entries, **kwargs):
+      for list_of_subentries in list_of_entries:
+          for subentry in list_of_subentries:
+              if subentry not in some_global_list:
+                  print("{} is not in the global list".format(subentry))
+              else:
+                  some_global_list.append(another_useful_function(subentry))
+      return some_global_list
+  ```
 
-    ```python
-    def useful_function_name(list_of_entries, **kwargs):
-        for list_of_subentries in list_of_entries:
-            for subentry in list_of_subentries:
-                if subentry not in some_global_list:
-                    print("{} is not in the global list".format(subentry))
-                else:
-                    some_global_list.append(another_useful_function(subentry))
-        return some_global_list
-    ```
+  And perhaps you could say that this bit of code is not a realistic example, but
+  it serves to illustrate that by having descriptive variable and function names and
+  using 4 space indentation makes the 79 character limit approach ever so
+  quickly.
 
-    And perhaps you could say that this bit of code is not a realistic example, but
-    it serves to illustrate that by having descriptive variable and function names and
-    using 4 space indentation makes the 79 character limit approach ever so
-    quickly.
+  So where does this leave us. Well we could go away and make the names of the
+  functions and variables shorter, but we then sacrifice readability for some
+  arbitrary number of characters. But guess what? Nobody is going to force you
+  (although they could do it through [commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) and [black](https://pypi.org/project/black/)) to be consistent with
+  that number, which gives you the space really to set your own limits for your
+  own team.
 
-    So where does this leave us. Well we could go away and make the names of the
-    functions and variables shorter, but we then sacrifice readability for some
-    arbitrary number of characters. But guess what? Nobody is going to force you
-    (although they could do it through [commit hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) and [black](https://pypi.org/project/black/)) to be consistent with
-    that number, which gives you the space really to set your own limits for your
-    own team.
+  Modern monitors and resolutions are wide. We can spare a few more characters
+  nowadays! However the key here is to keep the lines not too long and more
+  importantly readable. So pick a sensible line length (something like 90
+  characters perhaps just to add some space for indentation) and stick to it
+  unless you absolutely must deviate.
 
-    Modern monitors and resolutions are wide. We can spare a few more characters
-    nowadays! However the key here is to keep the lines not too long and more
-    importantly readable. So pick a sensible line length (something like 90
-    characters perhaps just to add some space for indentation) and stick to it
-    unless you absolutely must deviate.
+<!--list-separator-->
 
 - Blank Lines
 
+  I don't really have much to say on this bit of the style guide. I think it lays
+  out some sensible rules, but I do want to highlight this line:
 
-    I don't really have much to say on this bit of the style guide. I think it lays
-    out some sensible rules, but I do want to highlight this line:
+  > Use blank lines in functions, sparingly, to indicate logical sections.
 
-    > Use blank lines in functions, sparingly, to indicate logical sections.
+  I think this is a really good piece of advice and if you take away something
+  from this PEP8 suggestion on blank lines, it should probably be that.
 
-    I think this is a really good piece of advice and if you take away something
-    from this PEP8 suggestion on blank lines, it should probably be that.
+<!--list-separator-->
 
 - Imports
 
+  > - Imports are always put at the top of the file, just after any module comments
+  >   and docstrings, and before module globals and constants
+  > - Wildcard imports (from <module> import \*) should be avoided
 
-    > -   Imports are always put at the top of the file, just after any module comments
-    >     and docstrings, and before module globals and constants
-    > -   Wildcard imports (from <module> import \*) should be avoided
+  Those 2 bits of advice I think are key, there are some other things you could
+  learn by reading that section, but those are really the key things to follow.
 
-    Those 2 bits of advice I think are key, there are some other things you could
-    learn by reading that section, but those are really the key things to follow.
+  Imagine yourself opening a piece of code that someone else wrote. Now you scroll
+  through it without thinking, take a sip of coffee and start tackling the task of
+  understanding what it does. The first thing you want to know is what does it
+  depend on? What kind of packages do I need? Well if that person followed
+  sensible guidelines, you'd see it all in one place. Neat. On the other hand if
+  the imports are scattered everywhere, you need to do the good ol' `CTR+F` to
+  actually get what you want and even then it would involve tons of jumping around
+  through the file.
 
-    Imagine yourself opening a piece of code that someone else wrote. Now you scroll
-    through it without thinking, take a sip of coffee and start tackling the task of
-    understanding what it does. The first thing you want to know is what does it
-    depend on? What kind of packages do I need? Well if that person followed
-    sensible guidelines, you'd see it all in one place. Neat. On the other hand if
-    the imports are scattered everywhere, you need to do the good ol' `CTR+F` to
-    actually get what you want and even then it would involve tons of jumping around
-    through the file.
+  Imports at the top. Always.
 
-    Imports at the top. Always.
-
-    Now the second bit of advice about imports with \* is actually quite important. I
-    won't even go into things like namespacing, but suffice it to say that when one
-    reads through a codebase and stumbles upon a function that seems to be coming
-    from nowhere, usually \* is to blame. And even worse if someone used two or
-    more \* imports... well then you're in for a good ol' search online through the
-    package documentation (if you're lucky and that exists).
+  Now the second bit of advice about imports with \* is actually quite important. I
+  won't even go into things like namespacing, but suffice it to say that when one
+  reads through a codebase and stumbles upon a function that seems to be coming
+  from nowhere, usually \* is to blame. And even worse if someone used two or
+  more \* imports... well then you're in for a good ol' search online through the
+  package documentation (if you're lucky and that exists).
 
 ### Pet Peeves and other recommendations {#pet-peeves-and-other-recommendations}
 

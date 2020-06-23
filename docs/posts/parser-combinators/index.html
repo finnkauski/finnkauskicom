@@ -230,7 +230,7 @@ didn&rsquo;t care for the output of the parser (the 1 or more spaces), we actual
 want the color output from this parser if it succeeds. Finally the <code>semicolon</code>
 parser is a parser that takes the tag parser for the semicolon and then only
 returns a result if the <code>multispace0</code> finds 0 or more space-like string after
-the semicolon (hello optional newline!). Bus similarly to before, we aren&rsquo;t
+the semicolon (hello optional newline!). But similarly to before, we aren&rsquo;t
 interested in the semicolon itself, we will use this parser succeeding as an
 indicator that something is followed by a semicolor and optional spaces.</p>
 <p>Lastly we move onto the last combinator. Here we use the <code>color_string</code> parser
