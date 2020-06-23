@@ -821,7 +821,7 @@ more spaces only if they were preceeded by the word color.
 To clarify, this parser will return a parsed input of 1 or more spaces only if
 its preceeding parser =tag("color")= *_succeeds_*. Note that we're not really
 interested in parsing the spaces themselves and what we're really trying to do
-is to make a parser that fail when the pattern we are looking for isn't there
+is to make a parser that fails when the pattern we are looking for isn't there
 and its results are irrelevant to us in this case. So if one of the parsers
 within the combinator fails, the whole combined parser fails.
 

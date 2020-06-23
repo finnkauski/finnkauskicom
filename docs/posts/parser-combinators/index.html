@@ -218,7 +218,7 @@ more spaces only if they were preceeded by the word color.</p>
 <p>To clarify, this parser will return a parsed input of 1 or more spaces only if
 its preceeding parser <code>tag(&quot;color&quot;)</code> <strong><span class="underline">succeeds</span></strong>. Note that we&rsquo;re not really
 interested in parsing the spaces themselves and what we&rsquo;re really trying to do
-is to make a parser that fail when the pattern we are looking for isn&rsquo;t there
+is to make a parser that fails when the pattern we are looking for isn&rsquo;t there
 and its results are irrelevant to us in this case. So if one of the parsers
 within the combinator fails, the whole combined parser fails.</p>
 <p>Moving onto the <code>color_string</code> parser we can see it is quite similar. However
